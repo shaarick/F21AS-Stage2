@@ -1,7 +1,7 @@
 package main;
 
-public class Queue {
-	private Node<String> front, back;
+public class Queue<C> {
+	private Node<C> front, back;
 	private int size;
 	
 	public Queue() {
@@ -18,8 +18,8 @@ public class Queue {
 		return size==0;
 	}
 	
-	public void enqueue(String customer) {
-		Node<String> newNode = new Node<String>(customer);
+	public void enqueue(C customer) {
+		Node<C> newNode = new Node<C>(customer);
 		if(isEmpty()) {
 			front = newNode;
 		}
@@ -30,12 +30,12 @@ public class Queue {
 		size++;
 	}
 	
-	public String dequeue() {
+	public C dequeue() throws EmptyQueueException {
 		if(isEmpty()) {
-			return null;
+			throw new EmptyQueueException();
 		}
 		else {
-			String customer = front();
+			C customer = front();
 			front = front.getNext();
 			if(front==back) {
 				back = null;
@@ -45,9 +45,9 @@ public class Queue {
 		}
 	}
 	
-	public String front() {
+	public C front() throws EmptyQueueException {
 		if(isEmpty()) {
-			return null;
+			throw new EmptyQueueException();
 		}
 		else {
 			return front.getValue();
