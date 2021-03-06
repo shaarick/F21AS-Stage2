@@ -1,7 +1,7 @@
 package main;
 
-public class Queue<C> {
-	private Node<C> front, back;
+public class Queue<V> {
+	private Node<V> front, back;
 	private int size;
 	
 	public Queue() {
@@ -18,8 +18,8 @@ public class Queue<C> {
 		return size==0;
 	}
 	
-	public void enqueue(C customer) {
-		Node<C> newNode = new Node<C>(customer);
+	public void enqueue(V customer) {
+		Node<V> newNode = new Node<V>(customer);
 		if(isEmpty()) {
 			front = newNode;
 		}
@@ -30,22 +30,22 @@ public class Queue<C> {
 		size++;
 	}
 	
-	public C dequeue() throws EmptyQueueException {
+	public V dequeue() throws EmptyQueueException {
 		if(isEmpty()) {
 			throw new EmptyQueueException();
 		}
 		else {
-			C customer = front();
-			front = front.getNext();
+			V customer = front();
 			if(front==back) {
 				back = null;
 			}
+			front = front.getNext();
 			size--;
 			return customer;
 		}
 	}
 	
-	public C front() throws EmptyQueueException {
+	public V front() throws EmptyQueueException {
 		if(isEmpty()) {
 			throw new EmptyQueueException();
 		}
