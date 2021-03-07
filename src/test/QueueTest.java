@@ -52,7 +52,7 @@ public class QueueTest {
 		}
 		
 		try {
-			queue.dequeue();
+			assertTrue(queue.dequeue().equals("Andrew"));
 			assertFalse(queue.isEmpty());
 			assertEquals(1,queue.size());
 			assertTrue(queue.front().equals("Shariq"));
@@ -71,7 +71,7 @@ public class QueueTest {
 		}
 		
 		try {
-			queue.dequeue();
+			assertTrue(queue.dequeue().equals("Shariq"));
 			assertFalse(queue.isEmpty());
 			assertEquals(1,queue.size());
 			assertTrue(queue.front().equals("Nicolas"));
@@ -81,7 +81,7 @@ public class QueueTest {
 		}
 		
 		try {
-			queue.dequeue();
+			assertTrue(queue.dequeue().equals("Nicolas"));
 			assertEquals(0,queue.size());
 			assertTrue(queue.isEmpty());
 		}
@@ -111,6 +111,29 @@ public class QueueTest {
 		}
 		catch(EmptyQueueException exception) {
 			fail();
+		}
+		
+		try {
+			assertTrue(queue.dequeue().equals("Rashid"));
+			assertEquals(0,queue.size());
+			assertTrue(queue.isEmpty());
+		}
+		catch(EmptyQueueException exception) {
+			fail();
+		}
+		try {
+			queue.dequeue();
+			fail();
+		}
+		catch(EmptyQueueException exception) {
+			assertTrue(exception.getMessage().equals("Queue is empty"));
+		}
+		try {
+			queue.front();
+			fail();
+		}
+		catch(EmptyQueueException exception) {
+			assertTrue(exception.getMessage().equals("Queue is empty"));
 		}
 	}
 	
