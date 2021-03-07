@@ -15,7 +15,7 @@ public class Customer {
 	private static Set<Item> itemsOrdered;
 	private double totalOrderAmount;
 	
-	/**
+    /**
      * Creates an Customer object.
      * @param nameIn the name of the customer
      */
@@ -25,8 +25,8 @@ public class Customer {
 		setTotalOrderAmount();
 	}
 	
-	public String getName()				{ return name; 			   }
-	public Set<Item> getItemsOrdered()  { return itemsOrdered;	   }
+	public String getName()		    { return name; 	       }
+	public Set<Item> getItemsOrdered()  { return itemsOrdered;     }
 	public double getTotalOrderAmount() { return totalOrderAmount; }
 	
 	public void setName(String nameIn) {
@@ -49,7 +49,7 @@ public class Customer {
 		totalOrderAmount = total;
 	}
 
-	/**
+    /**
      * Adds an Item to the list of items ordered by the customer.
      * @param item the item to add to the list
      */
@@ -65,7 +65,7 @@ public class Customer {
 	    return;
 	}
 	
-	/**
+    /**
      * Necessary method to use a Customer in a HashSet
      * by enabling the comparison between two Customer objects,
      * their name being the element of comparison
@@ -75,7 +75,7 @@ public class Customer {
     	return name.compareTo(other.name);
     }
     
-	/**
+    /**
      * Necessary method to use a Customer in a HashSet
      * by enabling the comparison between two Customer objects,
      * their name being the element of comparison
