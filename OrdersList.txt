@@ -1,0 +1,8 @@
+Rashid, Croissant, 1.5, 3
+Rashid, Cranberry Scone, 2, 4
+Rashid, Ginger Scone, 3.5, 1
+Nicholas, Scottish Cream Scone, 2.5, 1
+Nicholas, Jumbo Savory Scone, 3.0, 1
+Thomas, Civet Cat, 2.0, 2
+Thomas, Raspberry Muffin, 3.0, 3
+Thomas, I Need ! Ink Pen, 7.5, 2
