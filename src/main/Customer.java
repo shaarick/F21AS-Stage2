@@ -14,6 +14,7 @@ public class Customer {
 	private String name;
 	private static Set<Item> itemsOrdered;
 	private double totalOrderAmount;
+	private int totalNumberItems;
 	
     /**
      * Creates an Customer object.
@@ -23,11 +24,13 @@ public class Customer {
 		name = nameIn;
 		itemsOrdered = new HashSet<Item>();
 		setTotalOrderAmount();
+		setTotalNumberItems();
 	}
 	
 	public String getName()		    { return name; 	       }
 	public Set<Item> getItemsOrdered()  { return itemsOrdered;     }
 	public double getTotalOrderAmount() { return totalOrderAmount; }
+	public double getTotalNumberItems() { return totalNumberItems; }
 	
 	public void setName(String nameIn) {
     	if (nameIn.trim().length() == 0) {
@@ -47,6 +50,14 @@ public class Customer {
 		}
 		//a call to the discounts methods on the total could be done here Shariq
 		totalOrderAmount = total;
+	}
+	
+	public void setTotalNumberItems() {
+		int total = 0;
+		for (Item io : itemsOrdered) {
+			total += io.getQuantity();
+		}
+		totalNumberItems = total;
 	}
 
     /**
