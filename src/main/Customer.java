@@ -3,6 +3,8 @@ package main;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.junit.jupiter.api.BeforeEach;
+
 /**
  * Customer class
  * This class defines the customers ordering items
@@ -15,13 +17,14 @@ public class Customer {
     private Set<Item> itemsOrdered;
     private double totalOrderAmount;
     private int totalNumberItems;
-	
+	private double discount;
     /**
      * Creates an Customer object.
      * @param nameIn the name of the customer
      */
     public Customer(String nameIn) {
     	name = nameIn;
+    	discount = 0.0;
 	itemsOrdered = new HashSet<Item>();
 	setTotalOrderAmount();
 	setTotalNumberItems();
@@ -31,6 +34,7 @@ public class Customer {
     public Set<Item> getItemsOrdered()  { return itemsOrdered;     }
     public double getTotalOrderAmount() { return totalOrderAmount; }
     public double getTotalNumberItems() { return totalNumberItems; }
+    public double getDiscount() { return discount; }
 	
     public void setName(String nameIn) {
     	if (nameIn.trim().length() == 0)
@@ -48,6 +52,7 @@ public class Customer {
 	    total += io.getPriceTotal();
 	//a call to the discounts methods on the total could be done here Shariq
 	totalOrderAmount = total;
+	Discount();
     }
 	
     public void setTotalNumberItems() {
@@ -104,4 +109,35 @@ public class Customer {
      * on the Customer's name
      */
     public int hashCode() { return name.hashCode(); }
+    
+    /**
+     * Applies the discount rule to our total order amoount
+     * and updates the value.
+     * @author Shariq Farooqui
+     */
+    public void Discount() {
+    	// Loop over all items this customer ordered
+    	for(Item item: itemsOrdered) {
+    		// Buy 3 or more of same item and get one free
+    		if (item.getQuantity() >= 3) {
+    			totalOrderAmount -= item.getPrice();
+    			discount += item.getPrice();
+    		}
+    	}
+    	
+    }
+    
+    /**
+     * Method to get discount details which can directly be 
+     * used in the GUI.
+     * @return String containing Total and Discount amount
+     */
+    public String getDiscountLine() {
+   
+		if (discount > 0) {
+			return "Total £" + totalOrderAmount + " (with £" + discount + " discount)";
+		} else {
+			return "Total £" + totalOrderAmount + " (no discount)";
+		}
+    }
 }

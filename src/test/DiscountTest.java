@@ -1,62 +1,52 @@
 package test;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import main.Discount;
+import main.Customer;
+import main.Item;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import org.junit.jupiter.api.BeforeEach;
+
 
 public class DiscountTest {
-	ArrayList<String> typeOne = new ArrayList<String>();
-	HashMap<String, ArrayList<String>> typeTwo = new HashMap<String, ArrayList<String>>();
-	ArrayList<String> one = new ArrayList<String>();
-	ArrayList<String> two = new ArrayList<String>();
-	ArrayList<String> three = new ArrayList<String>();
+	Customer one = new Customer("Rashid");
+	Customer two = new Customer("Nicholas");
+	Customer three = new Customer("Thomas");
 
 	@BeforeEach
-	public void setup() {
-		typeOne.add("Rashid, Croissant, 3, 4.5");
-		typeOne.add("Rashid, Cranberry Scone, 2, 4");
-		typeOne.add("Rashid, Ginger Scone, 1, 3.5");
-		typeOne.add("Nicholas, Scottish Cream Scone, 1, 2.5");
-		typeOne.add("Nicholas, Jumbo Savory Scone, 1, 3.0");
-		typeOne.add("Thomas, Civet Cat, 2, 4.0");
-		typeOne.add("Thomas, Raspberry Muffin, 3, 9.0");
-		typeOne.add("Thomas, I Need ! Ink Pen, 2, 15.0");
-
-		one.add("Croissant, 3, 4.5");
-		one.add("Cranberry Scone, 2, 4");
-		one.add("Ginger Scone, 1, 3.5");
-		typeTwo.put("Rashid", one);
-
-		two.add("Scottish Cream Scone, 1, 2.5");
-		two.add("Jumbo Savory Scone, 1, 3.0");
-		typeTwo.put("Nicholas", two);
-
-		three.add("Civet Cat, 2, 4.0");
-		three.add("Raspberry Muffin, 3, 9.0");
-		three.add("I Need ! Ink Pen, 2, 15.0");
-		typeTwo.put("Thomas", three);
+	public void setUp() {
+		one.addToItemsOrdered(new Item("Croissant", 1.5, 3));
+		one.addToItemsOrdered(new Item("Cranberry Scone", 2, 4));
+		one.addToItemsOrdered(new Item("Ginger Scone", 3.5, 1));
+		one.setTotalOrderAmount();
+		
+		two.addToItemsOrdered(new Item("Scottish Cream Scone", 2.5, 1));
+		two.addToItemsOrdered(new Item("Jumbo Savory Scone", 3.0, 1));
+		two.setTotalOrderAmount();
+		
+		three.addToItemsOrdered(new Item("Civet Cat", 2.0, 2));
+		three.addToItemsOrdered(new Item("Raspberry Muffin", 3.0, 3));
+		three.addToItemsOrdered(new Item("I Need ! Ink Pen", 7.5, 2));
+		three.setTotalOrderAmount();
+	}
+	
+	@Test
+	@DisplayName("TotalOrderAmount should work")
+	public void testAmount() {
+		assertEquals(12.5, one.getTotalOrderAmount());
+		assertEquals(5.5, two.getTotalOrderAmount());
+		assertEquals(25, three.getTotalOrderAmount()); 
 	}
 
 	@Test
-	@DisplayName("Discount with OrderList of ArrayList type should work")
-	public void testDiscountTypeOne() {
-		assertEquals("Total £10.5 (with £1.5 discount)", Discount.discountTypeOne("Rashid", typeOne));
-		assertEquals("Total £5.5 (no discount)", Discount.discountTypeOne("Nicholas", typeOne));
-		assertEquals("Total £25.0 (with £3.0 discount)", Discount.discountTypeOne("Thomas", typeOne));
+	@DisplayName("DiscountLine should work")
+	public void testDiscount() {
+		assertEquals("Total £12.5 (with £3.5 discount)", one.getDiscountLine());
+		assertEquals("Total £5.5 (no discount)", two.getDiscountLine());
+		assertEquals("Total £25.0 (with £3.0 discount)", three.getDiscountLine());
 	}
 
-	@Test
-	@DisplayName("Discount with OrderList of HashMap type should work")
-	public void testDiscountTypeTwo() {
-		assertEquals("Total £10.5 (with £1.5 discount)", Discount.discountTypeTwo("Rashid", typeTwo));
-		assertEquals("Total £5.5 (no discount)", Discount.discountTypeTwo("Nicholas", typeTwo));
-		assertEquals("Total £25.0 (with £3.0 discount)", Discount.discountTypeTwo("Thomas", typeTwo));
-	}
 }
