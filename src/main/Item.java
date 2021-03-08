@@ -31,23 +31,20 @@ public class Item {
     public double getPriceTotal() { return priceTotal; }
     
     public void setName(String nameIn) {
-    	if (nameIn.trim().length() == 0) {
+    	if (nameIn.trim().length() == 0)
         	throw new IllegalStateException("Item name blank.");
-        }
     	name = nameIn;
     }
     
     public void setPrice(double priceIn) {
-    	if (priceIn < 0) {
+    	if (priceIn < 0)
         	throw new IllegalStateException("Item price negative.");
-        }
     	price  = priceIn;
     }
     
     public void setQuantity(int quantityIn) {
-    	if (quantityIn < 1) {
+    	if (quantityIn < 1)
         	throw new IllegalStateException("Quantity negative or null.");
-        }
     	quantity  = quantityIn;
     }
 
