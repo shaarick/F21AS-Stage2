@@ -10,16 +10,24 @@ public class Staff implements Runnable {
 
 	@Override
 	public void run() {
-		System.out.println(Thread.currentThread().getName());
-		try {
-			Customer test = queue.dequeue();
-			System.out.println(test.getName());
-		} catch (EmptyQueueException e) {
-			e.printStackTrace();
+		while(!queue.isEmpty() && !queue.isTerminated()) {
+			try {Thread.currentThread().sleep(100);
+				try {
+					Customer test = queue.dequeue();
+					System.out.println(Thread.currentThread().getName() + " is serving " + test.getName());
+					System.out.println(queue.isEmpty());
+					if (queue.isTerminated()) {
+						notifyAll();
+						break;
+					}
+				} catch (EmptyQueueException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			catch (InterruptedException e) {}
 		}
-		
-		
 	}
-	
-	
 }
+
+//if producer is finished and queue empty ->end program
