@@ -50,11 +50,9 @@ public class CustomerList implements Runnable{
      * by feeding the queue with customers.
      */
     public void run() {
-    	System.out.println("Producer being run.");
-		for (Customer c : customerList) {
-		    queue.enqueue(c);
-		}
-		queue.setDone();
-		System.out.println("Producer has finished producing.");
+	for (Customer c : customerList) {
+	    queue.enqueue(c);
+	}
+	queue.setDone();
     }
 }
