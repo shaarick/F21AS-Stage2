@@ -8,6 +8,7 @@ import java.util.Set;
  * This class defines the customers ordering items
  * and regroups the items they ordered in a HashSet.
  * @author Nicolas JEAN - nj2000 - H00359359
+ * + Shariq FAROOQUI - msf2000 - H00358466 for the Discount() and getDiscountLine() methods
  */
 
 public class Customer {
@@ -47,10 +48,9 @@ public class Customer {
     public void setTotalOrderAmount() {
 	double total = 0;
 	for (Item io : itemsOrdered)
-	    total += io.getPriceTotal();
-	//a call to the discounts methods on the total could be done here Shariq
+		total += io.getPriceTotal();
 	totalOrderAmount = total;
-	Discount();
+	//Discount();
     }
 	
     public void setTotalNumberItems() {
@@ -72,7 +72,7 @@ public class Customer {
 	    }
 	}
 	itemsOrdered.add(item);
-	System.out.println("-> " + item.getName() + ", " + item.getQuantity() + ", at " + item.getPrice() + " $ each for a total of " + item.getPriceTotal() + "$, added to " + getName() + "'s order.");
+	System.out.println("-> " + item.getName() + ", " + item.getQuantity() + ", at " + item.getPrice() + " £ each for a total of " + item.getPriceTotal() + "£, added to " + getName() + "'s order.");
 	return;
     }
 	
@@ -109,9 +109,8 @@ public class Customer {
     public int hashCode() { return name.hashCode(); }
     
     /**
-     * Applies the discount rule to our total order amoount
+     * Applies the discount rule to our total order amount
      * and updates the value.
-     * @author Shariq Farooqui
      */
     public void Discount() {
     	// Loop over all items this customer ordered
@@ -133,9 +132,9 @@ public class Customer {
     public String getDiscountLine() {
    
 		if (discount > 0) {
-			return "Total £" + totalOrderAmount + " (with £" + discount + " discount)";
+			return "Total Â£" + totalOrderAmount + " (with Â£" + discount + " discount)";
 		} else {
-			return "Total £" + totalOrderAmount + " (no discount)";
+			return "Total Â£" + totalOrderAmount + " (no discount)";
 		}
     }
 }
