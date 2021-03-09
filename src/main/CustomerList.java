@@ -50,11 +50,11 @@ public class CustomerList implements Runnable{
      * by feeding the queue with customers.
      */
     public void run() {
-	for (Customer c : customerList) {
-	    try { Thread.sleep(50); }
-	    catch (InterruptedException e) {}
-		queue.enqueue(c);
-	}
-	//queue.setDone(); waiting for Andrew to implement it
+    	System.out.println("Producer being run.");
+		for (Customer c : customerList) {
+		    queue.enqueue(c);
+		}
+		queue.setDone();
+		System.out.println("Producer has finished producing.");
     }
 }
