@@ -18,7 +18,7 @@ public class Input {
 		customerList=customerListIn;
 	}
 
-	/**
+    /**
      * Reads a file and go through every of its lines
      * to determine which customer has ordered which items,
      * by creating a customer, adding the corresponding items to the
@@ -51,7 +51,7 @@ public class Input {
 			        	//to avoid adding the customer temp
 			        	if (!customerNameTemp.equals("")) {
 			        		customer.setTotalOrderAmount();
-			        		System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "$.");
+			        		System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "£.");
 			        		customerList.addCustomerToList(customer);
 			        	}
 			        	customerNameTemp = customerName;
@@ -63,8 +63,9 @@ public class Input {
 			}
 			//to add the last customer of the list
 			customer.setTotalOrderAmount();
-    		System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "$.");
+    		System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "£.");
 			customerList.addCustomerToList(customer);
+			System.out.println("-----------------------------------------------------------------------------------------");
 			scanner.close();
 		}
 		//if the file is not found, stop with system exit
@@ -74,7 +75,7 @@ public class Input {
 		}
     }
 
-	/**
+    /**
      * Reads the part of a line containing the info
      * on the item ordered, create the corresponding item, and adds it
      * to the itemsOrdered list of the corresponding customer.
