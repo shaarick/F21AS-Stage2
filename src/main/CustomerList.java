@@ -12,22 +12,22 @@ import java.util.Set;
 
 public class CustomerList implements Runnable{
     private Set<Customer> customerList;
-    private Queue queue;
+    private Queue<Customer> queue;
 	
     /**
      * Creates an CustomerList object.
      * @param queueIn the name of the queue that will be fed
      */
-    public CustomerList(Queue queueIn) {
+    public CustomerList(Queue<Customer> queueIn) {
 	customerList = new HashSet<Customer>();
 	queue = queueIn;
     };
 	
     public Set<Customer> getCustomerList() { return customerList; }
-    public Queue getQueue() { return queue; }
+    public Queue<Customer> getQueue() { return queue; }
 	
     public void setCustomerList(Set<Customer> customerListIn) {customerList = customerListIn; }
-    public void setQueue(Queue queueIn) { queue = queueIn; }
+    public void setQueue(Queue<Customer> queueIn) { queue = queueIn; }
 	
     /**
      * Adds a customer with his items ordered to the customerList.

@@ -3,11 +3,15 @@ package main;
 public class Queue<C> {
 	private Node<C> front, back;
 	private int size;
+	private boolean empty;
+	private boolean done;
 	
 	public Queue() {
 		size = 0;
 		front = null;
 		back = null;
+		empty = true;
+		done = false;
 	}
 	
 	public int size() {
@@ -18,10 +22,11 @@ public class Queue<C> {
 		return size==0;
 	}
 	
-	public void enqueue(C customer) {
+	public synchronized void enqueue(C customer) {
 		Node<C> newNode = new Node<C>(customer);
 		if(isEmpty()) {
 			front = newNode;
+			setEmpty(false);
 		}
 		else {
 			back.setNext(newNode);
@@ -30,13 +35,14 @@ public class Queue<C> {
 		size++;
 	}
 	
-	public C dequeue() throws EmptyQueueException {
+	public synchronized C dequeue() throws EmptyQueueException {
 		if(isEmpty()) {
 			throw new EmptyQueueException();
 		}
 		else {
 			if(front==back) {
 				back = null;
+				setEmpty(true);
 			}
 			C customer = front();
 			front = front.getNext();
@@ -52,6 +58,22 @@ public class Queue<C> {
 		else {
 			return front.getValue();
 		}
+	}
+	
+	public boolean getDone() {
+		return done;
+	}
+	
+	public void setDone() {
+		done = true;
+	}
+	
+	public boolean getEmpty() {
+		return empty;
+	}
+	
+	public void setEmpty(boolean empty) {
+		this.empty = empty;
 	}
 	
 	
