@@ -50,9 +50,13 @@ public class CustomerList implements Runnable{
      * by feeding the queue with customers.
      */
     public void run() {
-	for (Customer c : customerList) {
+    	for (Customer c : customerList) {
+	    try {Thread.currentThread().sleep(5000);}
+	    catch (InterruptedException e) {}
 	    queue.enqueue(c);
+	    System.out.println(c.getName() + "'s order added to the queue");
 	}
 	queue.setDone();
+	System.out.println("Orders list is empty");
     }
 }
