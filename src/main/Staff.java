@@ -11,6 +11,13 @@ public class Staff implements Runnable {
 	@Override
 	public void run() {
 		System.out.println(Thread.currentThread().getName());
+		try {
+			Customer test = (Customer) queue.dequeue();
+			System.out.println(test.getName());
+		} catch (EmptyQueueException e) {
+			e.printStackTrace();
+		}
+		
 		
 	}
 	
