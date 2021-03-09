@@ -3,8 +3,6 @@ package main;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.junit.jupiter.api.BeforeEach;
-
 /**
  * Customer class
  * This class defines the customers ordering items
