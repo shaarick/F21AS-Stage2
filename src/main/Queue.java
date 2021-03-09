@@ -1,5 +1,12 @@
 package main;
 
+/**
+ * Queue class
+ * 
+ * @author Andrew MASON - wam4 - H00267387
+ * + Nicolas JEAN - nj2000 - H00359359 for the isTerminated() method
+ */
+
 public class Queue<C> {
 	private Node<C> front, back;
 	private int size;
@@ -21,7 +28,14 @@ public class Queue<C> {
 	}
 
 	public synchronized boolean isTerminated() {
-		return (getDone() && isEmpty());
+		if (getDone() && !isEmpty())
+			return false;
+		else if (!getDone() && !isEmpty())
+			return false;
+		else if (!getDone() && isEmpty())
+			return false;
+		else
+			return true;
 	}
 
 	public synchronized void enqueue(C customer) {
@@ -33,25 +47,24 @@ public class Queue<C> {
 		}
 		back = newNode;
 		size++;
+		notifyAll();
 	}
 
 	public synchronized C dequeue() throws EmptyQueueException {
-		while (isEmpty()) { // when slot not available
-			try { wait(); } // producer enters Waiting state
-			catch (InterruptedException e) {
-			}
+		if (isEmpty()) {
+			try { wait(); }
+			catch (InterruptedException e) {}
 		}
-		/*
-		 * if(isEmpty()) { throw new EmptyQueueException(); }
-		 */
-		notifyAll();
-		if (front == back) {
-			back = null;
+		if (!isEmpty()) {
+			if (front == back)
+				back = null;
+			C customer = front();
+			front = front.getNext();
+			size--;
+			return customer;
 		}
-		C customer = front();
-		front = front.getNext();
-		size--;
-		return customer;
+		else
+			return null;
 	}
 
 	public C front() throws EmptyQueueException {
