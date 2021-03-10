@@ -28,14 +28,10 @@ public class Queue<C> {
 	}
 
 	public synchronized boolean isTerminated() {
-		if (getDone() && !isEmpty())
-			return false;
-		else if (!getDone() && !isEmpty())
-			return false;
-		else if (!getDone() && isEmpty())
-			return false;
-		else
+		if (getDone() && isEmpty())
 			return true;
+		else
+			return false;
 	}
 
 	public synchronized void enqueue(C customer) {
