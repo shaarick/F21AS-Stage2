@@ -50,26 +50,24 @@ public class Queue<C> {
 		notifyAll();
 	}
 
-	public synchronized C dequeue() throws EmptyQueueException {
+	public synchronized C dequeue() {
 		if (isEmpty()) {
 			try { wait(); }
 			catch (InterruptedException e) {}
 		}
+		C customer = front();
 		if (!isEmpty()) {
 			if (front == back)
 				back = null;
-			C customer = front();
 			front = front.getNext();
 			size--;
-			return customer;
 		}
-		else
-			return null;
+		return customer;
 	}
 
-	public C front() throws EmptyQueueException {
+	public C front() {
 		if (isEmpty()) {
-			throw new EmptyQueueException();
+			return null;
 		} else {
 			return front.getValue();
 		}
