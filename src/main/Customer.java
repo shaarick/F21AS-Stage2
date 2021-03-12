@@ -16,7 +16,8 @@ public class Customer {
     private Set<Item> itemsOrdered;
     private double totalOrderAmount;
     private int totalNumberItems;
-	private double discount;
+    private double discount;
+
     /**
      * Creates an Customer object.
      * @param nameIn the name of the customer
@@ -32,8 +33,8 @@ public class Customer {
     public String getName()		{ return name; 	           }
     public Set<Item> getItemsOrdered()  { return itemsOrdered;     }
     public double getTotalOrderAmount() { return totalOrderAmount; }
-    public double getTotalNumberItems() { return totalNumberItems; }
-    public double getDiscount() { return discount; }
+    public int getTotalNumberItems()    { return totalNumberItems; }
+    public double getDiscount()         { return discount; }
 	
     public void setName(String nameIn) {
     	if (nameIn.trim().length() == 0)
