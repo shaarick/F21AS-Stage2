@@ -51,6 +51,7 @@ public class Input {
 			        	//to avoid adding the customer temp
 			        	if (!customerNameTemp.equals("")) {
 			        		customer.setTotalOrderAmount();
+						customer.setTotalNumberItems();
 			        		System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "£.");
 			        		customerList.addCustomerToList(customer);
 			        	}
@@ -63,7 +64,8 @@ public class Input {
 			}
 			//to add the last customer of the list
 			customer.setTotalOrderAmount();
-    		System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "£.");
+			customer.setTotalNumberItems();
+    		        System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "£.");
 			customerList.addCustomerToList(customer);
 			System.out.println("-----------------------------------------------------------------------------------------");
 			scanner.close();
