@@ -32,5 +32,4 @@ public class Main {
     	Thread serverThree = new Thread(three, "Server 3");
     	serverThree.start();
     }
-    }
 }
