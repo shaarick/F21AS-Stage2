@@ -27,5 +27,10 @@ public class Main {
     	Staff two = new Staff(queue);
     	Thread serverTwo = new Thread(two, "Server 2");
     	serverTwo.start();
+        
+    	Staff three = new Staff(queue);
+    	Thread serverThree = new Thread(three, "Server 3");
+    	serverThree.start();
+    }
     }
 }
