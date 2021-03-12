@@ -17,13 +17,13 @@ public class Staff implements Runnable {
 
 	public void run() {
 		while (!queue.isTerminated()) {
-			//try {
-				Customer test = queue.dequeue();
-				if (!(test == null))
-					System.out.println(Thread.currentThread().getName() + " is serving " + test.getName());
-			/*} catch (EmptyQueueException e) {
-				e.printStackTrace();
-			}*/
+			Customer test = queue.dequeue();
+			if (!(test == null)) {
+				System.out.println(Thread.currentThread().getName() + " is serving " + test.getName());
+				try { Thread.currentThread().sleep(test.getTotalNumberItems() * 1000); }
+				catch (InterruptedException e) {}
+				System.out.println(Thread.currentThread().getName() + " has served " + test.getName());
+			}
 			try { Thread.currentThread().sleep(1000); }
 			catch (InterruptedException e) {}
 		}
