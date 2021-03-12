@@ -1,5 +1,6 @@
 package main;
 
+import java.lang.Math;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -51,10 +52,10 @@ public class CustomerList implements Runnable{
      */
     public void run() {
     	for (Customer c : customerList) {
-	    try {Thread.currentThread().sleep(5000);}
+	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * 1000));}
 	    catch (InterruptedException e) {}
 	    queue.enqueue(c);
-	    System.out.println(c.getName() + "'s order added to the queue");
+	    System.out.println(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
 	}
 	queue.setDone();
 	System.out.println("Orders list is empty");
