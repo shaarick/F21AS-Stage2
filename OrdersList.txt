@@ -31,7 +31,7 @@ Anthony, Choco Brownie, 1.5, 1
 Anthony, I Need ! T-shirt, 28.0, 1
 Anthony, Chili Mayan, 13.33, 2
 Jessica, Lemon Grass, 2.5, 2
-Jessica, Spicy Eye Open, 2.55, 3
+Jessica, Spicy Eye Open, 2.5, 3
 Jim, Almond Croissant, 3.75, 4
 Jim, 3 Maple Pancake, 2.5, 1
 Jim, I Need ! Cup, 14.0, 1
