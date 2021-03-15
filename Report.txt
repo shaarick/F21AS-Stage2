@@ -1,0 +1,18 @@
+Rashid Order: 
+Croissant: 	1.5
+Cranberry Scone: 	2.0
+Ginger Scone: 	3.5
+TOTAL AMOUNT OF ORDER (inc Discounts): 16.0
+--------------------------------------------------------------------------------- 
+Andrew Order: 
+I Need ! Ink Pen: 	7.5
+Raspberry Muffin: 	3.0
+Civet Cat: 	2.0
+TOTAL AMOUNT OF ORDER (inc Discounts): 28.0
+--------------------------------------------------------------------------------- 
+Nicolas Order: 
+Scottish Cream Scone: 	2.5
+Jumbo Savory Scone: 	3.0
+TOTAL AMOUNT OF ORDER (inc Discounts): 5.5
+--------------------------------------------------------------------------------- 
+GLOBAL NET INCOME == 49.5

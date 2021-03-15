@@ -1,0 +1,64 @@
+Mar 15, 2021 8:46:15 PM main.LogClass <init>
+INFO: CoffeeShop_LogFile:
+Mar 15, 2021 8:46:15 PM main.Input readFile
+INFO: Customer Rashid created.
+Mar 15, 2021 8:46:15 PM main.Customer addToItemsOrdered
+INFO: -> Croissant, 3, at 1.5 £ each for a total of 4.5£, added to Rashid's order.
+Mar 15, 2021 8:46:15 PM main.Customer addToItemsOrdered
+INFO: -> Cranberry Scone, 4, at 2.0 £ each for a total of 8.0£, added to Rashid's order.
+Mar 15, 2021 8:46:15 PM main.Customer addToItemsOrdered
+INFO: -> Ginger Scone, 1, at 3.5 £ each for a total of 3.5£, added to Rashid's order.
+Mar 15, 2021 8:46:15 PM main.Input readFile
+INFO: Rashid's total order amount: 16.0£.
+Mar 15, 2021 8:46:15 PM main.CustomerList addCustomerToList
+INFO: Rashid added to the customers' list.
+Mar 15, 2021 8:46:15 PM main.Input readFile
+INFO: Customer Nicolas created.
+Mar 15, 2021 8:46:15 PM main.Customer addToItemsOrdered
+INFO: -> Scottish Cream Scone, 1, at 2.5 £ each for a total of 2.5£, added to Nicolas's order.
+Mar 15, 2021 8:46:15 PM main.Customer addToItemsOrdered
+INFO: -> Jumbo Savory Scone, 1, at 3.0 £ each for a total of 3.0£, added to Nicolas's order.
+Mar 15, 2021 8:46:15 PM main.Input readFile
+INFO: Nicolas's total order amount: 5.5£.
+Mar 15, 2021 8:46:15 PM main.CustomerList addCustomerToList
+INFO: Nicolas added to the customers' list.
+Mar 15, 2021 8:46:15 PM main.Input readFile
+INFO: Customer Andrew created.
+Mar 15, 2021 8:46:15 PM main.Customer addToItemsOrdered
+INFO: -> Civet Cat, 2, at 2.0 £ each for a total of 4.0£, added to Andrew's order.
+Mar 15, 2021 8:46:15 PM main.Customer addToItemsOrdered
+INFO: -> Raspberry Muffin, 3, at 3.0 £ each for a total of 9.0£, added to Andrew's order.
+Mar 15, 2021 8:46:15 PM main.Customer addToItemsOrdered
+INFO: -> I Need ! Ink Pen, 2, at 7.5 £ each for a total of 15.0£, added to Andrew's order.
+Mar 15, 2021 8:46:15 PM main.Input readFile
+INFO: Andrew's total order amount: 28.0£.
+Mar 15, 2021 8:46:15 PM main.CustomerList addCustomerToList
+INFO: Andrew added to the customers' list.
+Mar 15, 2021 8:46:15 PM main.Input readFile
+INFO: -----------------------------------------------------------------------------------------
+Mar 15, 2021 8:46:20 PM main.CustomerList run
+INFO: Rashid ordered 8 items. The order has been added to the queue
+Mar 15, 2021 8:46:20 PM main.Staff run
+INFO: Server 3 is serving Rashid
+Mar 15, 2021 8:46:26 PM main.CustomerList run
+INFO: Andrew ordered 7 items. The order has been added to the queue
+Mar 15, 2021 8:46:26 PM main.Staff run
+INFO: Server 1 is serving Andrew
+Mar 15, 2021 8:46:28 PM main.Staff run
+INFO: Server 3 has served Rashid
+Mar 15, 2021 8:46:30 PM main.CustomerList run
+INFO: Nicolas ordered 2 items. The order has been added to the queue
+Mar 15, 2021 8:46:30 PM main.Staff run
+INFO: Server 3 is serving Nicolas
+Mar 15, 2021 8:46:30 PM main.CustomerList run
+INFO: Orders list is empty
+Mar 15, 2021 8:46:31 PM main.Staff run
+INFO: Server 2 is done working.
+Mar 15, 2021 8:46:32 PM main.Staff run
+INFO: Server 3 has served Nicolas
+Mar 15, 2021 8:46:33 PM main.Staff run
+INFO: Server 1 has served Andrew
+Mar 15, 2021 8:46:33 PM main.Staff run
+INFO: Server 3 is done working.
+Mar 15, 2021 8:46:34 PM main.Staff run
+INFO: Server 1 is done working.
