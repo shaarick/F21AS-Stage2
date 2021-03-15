@@ -52,12 +52,14 @@ public class Input {
 			        	if (!customerNameTemp.equals("")) {
 			        		customer.setTotalOrderAmount();
 						customer.setTotalNumberItems();
-			        		System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "£.");
+						LogClass.logger.info(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "£.");
+						//System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "£.");
 			        		customerList.addCustomerToList(customer);
 			        	}
 			        	customerNameTemp = customerName;
 			        	customer = new Customer(customerName);
-			        	System.out.println("Customer " + customerName + " created.");
+			        	LogClass.logger.info("Customer " + customerName + " created.");
+			        	//System.out.println("Customer " + customerName + " created.");
 			        	processLine(customer, parts);
 			        }
 				}
@@ -65,9 +67,11 @@ public class Input {
 			//to add the last customer of the list
 			customer.setTotalOrderAmount();
 			customer.setTotalNumberItems();
-    		        System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "£.");
+    		LogClass.logger.info(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "£.");        
+			//System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "£.");
 			customerList.addCustomerToList(customer);
-			System.out.println("-----------------------------------------------------------------------------------------");
+			LogClass.logger.info("-----------------------------------------------------------------------------------------");
+			//System.out.println("-----------------------------------------------------------------------------------------");
 			scanner.close();
 		}
 		//if the file is not found, stop with system exit

@@ -19,15 +19,18 @@ public class Staff implements Runnable {
 		while (!queue.isTerminated()) {
 			Customer test = queue.dequeue();
 			if (!(test == null)) {
-				System.out.println(Thread.currentThread().getName() + " is serving " + test.getName());
+				LogClass.logger.info(Thread.currentThread().getName() + " is serving " + test.getName());
+				//System.out.println(Thread.currentThread().getName() + " is serving " + test.getName());
 				try { Thread.currentThread().sleep(test.getTotalNumberItems() * 1000); }
 				catch (InterruptedException e) {}
-				System.out.println(Thread.currentThread().getName() + " has served " + test.getName());
+				LogClass.logger.info(Thread.currentThread().getName() + " has served " + test.getName());
+				//System.out.println(Thread.currentThread().getName() + " has served " + test.getName());
 			}
 			try { Thread.currentThread().sleep(1000); }
 			catch (InterruptedException e) {}
 		}
-		System.out.println(Thread.currentThread().getName() + " is done working.");
+		LogClass.logger.info(Thread.currentThread().getName() + " is done working.");
+		//System.out.println(Thread.currentThread().getName() + " is done working.");
 		return;
 	}
 }

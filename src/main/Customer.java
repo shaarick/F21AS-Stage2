@@ -68,12 +68,17 @@ public class Customer {
     public void addToItemsOrdered(Item item) {
         for (Item io : itemsOrdered) {
 	    if (item.hashCode() == io.hashCode()) {
-	        System.out.println(io.getName() + " already present in the customer's order.");
+	        
+	    	LogClass.logger.info(io.getName() + " already present in the customer's order.");
+	    	
+	    	//System.out.println(io.getName() + " already present in the customer's order.");
 	        return;
 	    }
 	}
 	itemsOrdered.add(item);
-	System.out.println("-> " + item.getName() + ", " + item.getQuantity() + ", at " + item.getPrice() + " £ each for a total of " + item.getPriceTotal() + "£, added to " + getName() + "'s order.");
+	LogClass.logger.info("-> " + item.getName() + ", " + item.getQuantity() + ", at " + item.getPrice() + " £ each for a total of " + item.getPriceTotal() + "£, added to " + getName() + "'s order.");
+	
+	//System.out.println("-> " + item.getName() + ", " + item.getQuantity() + ", at " + item.getPrice() + " £ each for a total of " + item.getPriceTotal() + "£, added to " + getName() + "'s order.");
 	return;
     }
 	

@@ -37,12 +37,15 @@ public class CustomerList implements Runnable{
     public void addCustomerToList(Customer customer) {
 	for (Customer c : customerList) {
 	    if (customer.hashCode() == c.hashCode()) {
-                System.out.println("Customer " + c.getName() + " already ordered and is already in the list.");
+	    	LogClass.logger.info("Customer " + c.getName() + " already ordered and is already in the list.");
+	    	//System.out.println("Customer " + c.getName() + " already ordered and is already in the list.");
 	        return;
 	    }
 	}
 	customerList.add(customer);
-	System.out.println(customer.getName() + " added to the customers' list.");
+	
+	LogClass.logger.info(customer.getName() + " added to the customers' list.");
+	//System.out.println(customer.getName() + " added to the customers' list.");
 	return;
     }
 	
@@ -55,9 +58,12 @@ public class CustomerList implements Runnable{
 	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * 1000));}
 	    catch (InterruptedException e) {}
 	    queue.enqueue(c);
-	    System.out.println(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
+	    LogClass.logger.info(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
+	    
+	    //System.out.println(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
 	}
 	queue.setDone();
-	System.out.println("Orders list is empty");
+	LogClass.logger.info("Orders list is empty");
+	//	System.out.println("Orders list is empty");
     }
 }
