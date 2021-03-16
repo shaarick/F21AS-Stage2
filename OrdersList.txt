@@ -6,3 +6,41 @@ Nicolas, Jumbo Savory Scone, 3.0, 1
 Andrew, Civet Cat, 2.0, 2
 Andrew, Raspberry Muffin, 3.0, 3
 Andrew, I Need ! Ink Pen, 7.5, 2
+Shariq, Brazilian, 2.2, 2
+Shariq, Choco Biscotti, 3.5, 3
+Shariq, I Need ! Glasses, 17.5, 1
+Shariq, I Need ! Ring, 35.0, 1
+Isabel, Brasileiro Shot, 3.0, 4
+Isabel, Latte, 3.75, 1
+Henry, Flan Vanille, 2.0, 1
+Anna, Choco Croissant, 3.75, 3
+Anna, Rio Nights, 6.0, 1
+Lucy, I Need ! Toque, 23.0, 1
+Lucy, Raspberry Muffin, 2.0, 1
+Lucy, Happy Holidays, 3.75, 1
+Lucy, Tradition Chai, 2.5, 2
+Sean, Scottish Scone, 4.5, 5
+Sean, Choux à la crème, 2.0, 2
+Sean, Earl Grey, 2.5, 3
+Emma, Paris Brest, 3.5, 4
+Emma, Chouquettes 20u, 1.5, 2
+Emma, I Need ! Scarf, 120.0, 1
+Emma, Cappuccino, 3.75, 3
+James, Dark Chocolate, 3.5, 1
+Anthony, Choco Brownie, 1.5, 1
+Anthony, I Need ! T-shirt, 28.0, 1
+Anthony, Chili Mayan, 13.33, 2
+Jessica, Lemon Grass, 2.5, 2
+Jessica, Spicy Eye Open, 2.5, 3
+Jim, Almond Croissant, 3.75, 4
+Jim, 3 Maple Pancake, 2.5, 1
+Jim, I Need ! Cup, 14.0, 1
+Michael, Grown Organic, 3.75, 1
+Michael, Snow Hot Choco, 3.0, 1
+Michael, Morning Sunrise, 2.5, 2
+Michael, Organic Decaf, 22.5, 1
+Michael, Jumbo Scone, 3.75, 3
+Michael, Choux a la creme, 2.0, 5
+Michael, I Need ! Mug, 12.0, 1
+Robin, Eclair Coffee, 2.5, 2
+Robin, English Break, 2.5, 2
