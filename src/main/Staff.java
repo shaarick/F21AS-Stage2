@@ -12,6 +12,7 @@ public class Staff implements Runnable, Subject {
 	private String name;
 	private Queue<Customer> queue;
 	private List<Observer> gui;
+	private Customer current;
 
 	public Staff(String name, Queue<Customer> q) {
 		this.name = name;
@@ -22,13 +23,14 @@ public class Staff implements Runnable, Subject {
 	public void run() {
 		registerObserver(new StaffGUI(name,this));
 		while (!queue.isTerminated()) {
-			Customer test = queue.dequeue();
-			if (!(test == null)) {
-				LogClass.logger.info(Thread.currentThread().getName() + " is serving " + test.getName());
+			current = queue.dequeue();
+			if (!(current == null)) {
+				LogClass.logger.info(Thread.currentThread().getName() + " is serving " + current.getName());
+				notifyObservers();
 				//System.out.println(Thread.currentThread().getName() + " is serving " + test.getName());
-				try { Thread.currentThread().sleep(test.getTotalNumberItems() * 1000); }
+				try { Thread.currentThread().sleep(current.getTotalNumberItems() * 1000); }
 				catch (InterruptedException e) {}
-				LogClass.logger.info(Thread.currentThread().getName() + " has served " + test.getName());
+				LogClass.logger.info(Thread.currentThread().getName() + " has served " + current.getName());
 				//System.out.println(Thread.currentThread().getName() + " has served " + test.getName());
 			}
 			try { Thread.currentThread().sleep(1000); }
@@ -37,6 +39,10 @@ public class Staff implements Runnable, Subject {
 		LogClass.logger.info(Thread.currentThread().getName() + " is done working.");
 		//System.out.println(Thread.currentThread().getName() + " is done working.");
 		return;
+	}
+	
+	public Customer getCurrent() {
+		return current;
 	}
 
 	public void registerObserver(Observer observer) {
