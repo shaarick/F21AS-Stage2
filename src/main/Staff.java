@@ -1,5 +1,5 @@
 package main;
-
+import java.util.*;
 /**
  * Staff class
  * This class manages the threads initialized by the different staff members
@@ -8,14 +8,19 @@ package main;
  * + Nicolas JEAN - nj2000 - H00359359 for the run() method
  */
 
-public class Staff implements Runnable {
+public class Staff implements Runnable, Subject {
+	private String name;
 	private Queue<Customer> queue;
+	private List<Observer> gui;
 
-	public Staff(Queue<Customer> q) {
+	public Staff(String name, Queue<Customer> q) {
+		this.name = name;
 		queue = q;
+		gui = new LinkedList<Observer>();
 	}
 
 	public void run() {
+		registerObserver(new StaffGUI(name,this));
 		while (!queue.isTerminated()) {
 			Customer test = queue.dequeue();
 			if (!(test == null)) {
@@ -32,5 +37,20 @@ public class Staff implements Runnable {
 		LogClass.logger.info(Thread.currentThread().getName() + " is done working.");
 		//System.out.println(Thread.currentThread().getName() + " is done working.");
 		return;
+	}
+
+	public void registerObserver(Observer observer) {
+		gui.add(observer);
+	}
+
+	public void removeObserver(Observer observer) {
+		gui.remove(observer);
+		
+	}
+
+	public void notifyObservers() {
+		for(Observer observer: gui) {
+			observer.update();
+		}
 	}
 }

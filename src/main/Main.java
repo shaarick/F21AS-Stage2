@@ -33,15 +33,15 @@ public class Main {
 		//customerList.run();
 
 
-		Staff one = new Staff(queue);
+		Staff one = new Staff("Server 1", queue);
 		Thread serverOne = new Thread(one, "Server 1");
 		serverOne.start();
 
-		Staff two = new Staff(queue);
+		Staff two = new Staff("Server 2", queue);
 		Thread serverTwo = new Thread(two, "Server 2");
 		serverTwo.start();
 
-		Staff three = new Staff(queue);
+		Staff three = new Staff("Server 3", queue);
 		Thread serverThree = new Thread(three, "Server 3");
 		serverThree.start();
 		
