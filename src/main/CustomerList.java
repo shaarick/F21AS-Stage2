@@ -2,6 +2,8 @@ package main;
 
 import java.lang.Math;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -11,9 +13,10 @@ import java.util.Set;
  * @author Nicolas JEAN - nj2000 - H00359359
  */
 
-public class CustomerList implements Runnable{
+public class CustomerList implements Runnable, Subject{
     private Set<Customer> customerList;
     private Queue<Customer> queue;
+    private List<Observer> gui;
 	
     /**
      * Creates an CustomerList object.
@@ -22,6 +25,7 @@ public class CustomerList implements Runnable{
     public CustomerList(Queue<Customer> queueIn) {
 	customerList = new HashSet<Customer>();
 	queue = queueIn;
+	gui = new LinkedList<Observer>();
     };
 	
     public Set<Customer> getCustomerList() { return customerList; }
@@ -54,10 +58,12 @@ public class CustomerList implements Runnable{
      * by feeding the queue with customers.
      */
     public void run() {
+    	registerObserver(new QueueGUI(this));
     	for (Customer c : customerList) {
 	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * 1000));}
 	    catch (InterruptedException e) {}
 	    queue.enqueue(c);
+	    notifyObservers();
 	    LogClass.logger.info(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
 	    
 	    //System.out.println(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
@@ -66,4 +72,19 @@ public class CustomerList implements Runnable{
 	LogClass.logger.info("Orders list is empty");
 	//	System.out.println("Orders list is empty");
     }
+    
+	public void registerObserver(Observer observer) {
+		gui.add(observer);
+	}
+
+	public void removeObserver(Observer observer) {
+		gui.remove(observer);
+		
+	}
+
+	public void notifyObservers() {
+		for(Observer observer: gui) {
+			observer.update();
+		}
+	}
 }

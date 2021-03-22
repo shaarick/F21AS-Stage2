@@ -15,6 +15,8 @@ public class Main {
 	private final static Path p = Paths.get("Report.txt").toAbsolutePath(); //stores the path (works on any system)
 	
 	public static void main (String [] args) throws InterruptedException {
+		
+		
 		log = new LogClass();
 		Queue<Customer> queue = new Queue<Customer>();
 		//Initializing a CustomerList
@@ -24,7 +26,8 @@ public class Main {
 		//Reading the OrdersList and filling up the customerList
 		i.readFile("OrdersList.txt");
 
-
+		QueueGUI q = new QueueGUI(customerList);
+		
 		//Starting up the producer thread
 		//and passing the customers from the customerList
 		//to the queue
