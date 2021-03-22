@@ -13,10 +13,10 @@ import java.util.Set;
  * @author Nicolas JEAN - nj2000 - H00359359
  */
 
-public class CustomerList implements Runnable, Subject{
+public class CustomerList implements Runnable, Subject2{
     private Set<Customer> customerList;
     private Queue<Customer> queue;
-    private List<Observer> gui;
+    private List<Observer2> gui;
 	
     /**
      * Creates an CustomerList object.
@@ -25,7 +25,7 @@ public class CustomerList implements Runnable, Subject{
     public CustomerList(Queue<Customer> queueIn) {
 	customerList = new HashSet<Customer>();
 	queue = queueIn;
-	gui = new LinkedList<Observer>();
+	gui = new LinkedList<Observer2>();
     };
 	
     public Set<Customer> getCustomerList() { return customerList; }
@@ -58,12 +58,12 @@ public class CustomerList implements Runnable, Subject{
      * by feeding the queue with customers.
      */
     public void run() {
-    	registerObserver(new QueueGUI(this));
+    	registerObserver(new QueueGUI(this.queue));
     	for (Customer c : customerList) {
 	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * 1000));}
 	    catch (InterruptedException e) {}
 	    queue.enqueue(c);
-	    notifyObservers();
+	    notifyObservers(c);
 	    LogClass.logger.info(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
 	    
 	    //System.out.println(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
@@ -72,19 +72,26 @@ public class CustomerList implements Runnable, Subject{
 	LogClass.logger.info("Orders list is empty");
 	//	System.out.println("Orders list is empty");
     }
-    
-	public void registerObserver(Observer observer) {
+
+	@Override
+	public void registerObserver(Observer2 observer) {
+		// TODO Auto-generated method stub
 		gui.add(observer);
 	}
 
-	public void removeObserver(Observer observer) {
+	@Override
+	public void removeObserver(Observer2 observer) {
+		// TODO Auto-generated method stub
 		gui.remove(observer);
-		
 	}
 
-	public void notifyObservers() {
-		for(Observer observer: gui) {
-			observer.update();
+	@Override
+	public void notifyObservers(Customer c) {
+		// TODO Auto-generated method stub
+		for(Observer2 observer: gui) {
+			observer.update(c);
 		}
 	}
+    
+
 }

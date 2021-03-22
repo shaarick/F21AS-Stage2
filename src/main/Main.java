@@ -25,8 +25,6 @@ public class Main {
 		Input i = new Input(customerList);
 		//Reading the OrdersList and filling up the customerList
 		i.readFile("OrdersList.txt");
-
-		QueueGUI q = new QueueGUI(customerList);
 		
 		//Starting up the producer thread
 		//and passing the customers from the customerList
