@@ -41,10 +41,10 @@ public class Main {
 		Staff two = new Staff("Server 2", queue);
 		Thread serverTwo = new Thread(two, "Server 2");
 		serverTwo.start();
-
-		Staff three = new Staff("Server 3", queue);
-		Thread serverThree = new Thread(three, "Server 3");
-		serverThree.start();
+//
+//		Staff three = new Staff("Server 3", queue);
+//		Thread serverThree = new Thread(three, "Server 3");
+//		serverThree.start();
 		
 		writeReport();
 	}
