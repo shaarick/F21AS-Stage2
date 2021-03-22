@@ -9,6 +9,7 @@ public class StaffGUI extends JFrame implements Observer {
 	JTextArea textArea;
 	Staff staff;
 	String str;
+	JLabel disc;
 	
 	public StaffGUI(String name, Staff staff) {
 		setSize(800,400);
@@ -22,6 +23,8 @@ public class StaffGUI extends JFrame implements Observer {
 		textArea = new JTextArea();
 		getContentPane().add(textArea, BorderLayout.CENTER);
 		
+		disc = new JLabel();
+		getContentPane().add(disc, BorderLayout.SOUTH);
 		
 		this.staff = staff;
 		this.staff.registerObserver(this);
@@ -34,5 +37,6 @@ public class StaffGUI extends JFrame implements Observer {
 		display.setText(Thread.currentThread().getName() + " is serving " + staff.getCurrent().getName());
 		textArea.setText(str);
 		str = "";
+		disc.setText(staff.getCurrent().getDiscountLine());
 	}
 }
