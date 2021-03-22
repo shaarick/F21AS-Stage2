@@ -32,6 +32,7 @@ public class StaffGUI extends JFrame implements Observer {
 			str += i.getQuantity() + " " + i.getName() + "\n";
 		}
 		display.setText(Thread.currentThread().getName() + " is serving " + staff.getCurrent().getName());
-		textArea.setText(str); 
+		textArea.setText(str);
+		str = "";
 	}
 }

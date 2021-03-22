@@ -138,9 +138,9 @@ public class Customer {
     public String getDiscountLine() {
    
 		if (discount > 0) {
-			return "Total Â£" + totalOrderAmount + " (with Â£" + discount + " discount)";
+			return "Total £" + totalOrderAmount + " (with £" + discount + " discount)";
 		} else {
-			return "Total Â£" + totalOrderAmount + " (no discount)";
+			return "Total £" + totalOrderAmount + " (no discount)";
 		}
     }
 }
