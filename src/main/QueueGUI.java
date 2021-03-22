@@ -12,7 +12,7 @@ public class QueueGUI extends JFrame implements Observer2{
 	public QueueGUI(Queue<Customer> queue) {
 		this.queue = queue;
 		
-		this.setSize(500, 400);
+		this.setSize(400, 300);
         this.setTitle("Queue");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
