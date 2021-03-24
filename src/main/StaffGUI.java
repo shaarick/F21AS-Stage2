@@ -11,12 +11,20 @@ public class StaffGUI extends JFrame implements Observer {
 	Staff staff;
 	String str;
 	JLabel disc;
+	private static Integer count = 0;
 	
 	public StaffGUI(String name, Staff staff) {
-		setSize(200,300);
+		setSize(300,300);
 		setVisible(true);
 		setTitle(name);
-        this.setLocation(1080, 857);
+		
+		if(StaffGUI.count == 0) {
+			setLocation(0, 375);	
+			count++;
+		} else if(StaffGUI.count == 1) {
+			setLocation(301, 375);	
+			count++;
+		}
         
 		GridLayout grid = new GridLayout(0,1,0,0);
 		this.setLayout(grid);

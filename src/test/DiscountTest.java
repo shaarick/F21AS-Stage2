@@ -23,6 +23,7 @@ public class DiscountTest {
 		one.addToItemsOrdered(new Item("Ginger Scone", 3.5, 1));
 		one.setTotalOrderAmount();
 		
+		
 		two.addToItemsOrdered(new Item("Scottish Cream Scone", 2.5, 1));
 		two.addToItemsOrdered(new Item("Jumbo Savory Scone", 3.0, 1));
 		two.setTotalOrderAmount();

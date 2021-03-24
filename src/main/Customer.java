@@ -1,5 +1,6 @@
 package main;
 
+import java.text.DecimalFormat;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -51,7 +52,7 @@ public class Customer {
 	for (Item io : itemsOrdered)
 		total += io.getPriceTotal();
 	totalOrderAmount = total;
-	//Discount();
+	Discount();
     }
 	
     public void setTotalNumberItems() {
@@ -136,11 +137,11 @@ public class Customer {
      * @return String containing Total and Discount amount
      */
     public String getDiscountLine() {
-   
+    	 DecimalFormat df = new DecimalFormat("##.00");
 		if (discount > 0) {
-			return "Total £" + totalOrderAmount + " (with £" + discount + " discount)";
+			return "Total £" + df.format(totalOrderAmount) + " (with £" + discount + " discount)";
 		} else {
-			return "Total £" + totalOrderAmount + " (no discount)";
+			return "Total £" + df.format(totalOrderAmount) + " (no discount)";
 		}
     }
 }

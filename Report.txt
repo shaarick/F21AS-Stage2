@@ -1,18 +1,95 @@
+Isabel Order: 
+Brasileiro Shot: 	3.0
+Latte: 	3.75
+TOTAL AMOUNT OF ORDER (inc Discounts): 12.75
+--------------------------------------------------------------------------------- 
+James Order: 
+Dark Chocolate: 	3.5
+TOTAL AMOUNT OF ORDER (inc Discounts): 3.5
+--------------------------------------------------------------------------------- 
+Anthony Order: 
+Chili Mayan: 	13.33
+Choco Brownie: 	1.5
+I Need ! T-shirt: 	28.0
+TOTAL AMOUNT OF ORDER (inc Discounts): 56.16
+--------------------------------------------------------------------------------- 
 Rashid Order: 
 Croissant: 	1.5
 Cranberry Scone: 	2.0
 Ginger Scone: 	3.5
-TOTAL AMOUNT OF ORDER (inc Discounts): 16.0
+TOTAL AMOUNT OF ORDER (inc Discounts): 12.5
 --------------------------------------------------------------------------------- 
 Andrew Order: 
 I Need ! Ink Pen: 	7.5
 Raspberry Muffin: 	3.0
 Civet Cat: 	2.0
-TOTAL AMOUNT OF ORDER (inc Discounts): 28.0
+TOTAL AMOUNT OF ORDER (inc Discounts): 25.0
+--------------------------------------------------------------------------------- 
+Shariq Order: 
+I Need ! Ring: 	35.0
+I Need ! Glasses: 	17.5
+Brazilian: 	2.2
+Choco Biscotti: 	3.5
+TOTAL AMOUNT OF ORDER (inc Discounts): 63.900000000000006
 --------------------------------------------------------------------------------- 
 Nicolas Order: 
 Scottish Cream Scone: 	2.5
 Jumbo Savory Scone: 	3.0
 TOTAL AMOUNT OF ORDER (inc Discounts): 5.5
 --------------------------------------------------------------------------------- 
-GLOBAL NET INCOME == 49.5
+Jim Order: 
+3 Maple Pancake: 	2.5
+Almond Croissant: 	3.75
+I Need ! Cup: 	14.0
+TOTAL AMOUNT OF ORDER (inc Discounts): 27.75
+--------------------------------------------------------------------------------- 
+Michael Order: 
+Jumbo Scone: 	3.75
+Organic Decaf: 	22.5
+Morning Sunrise: 	2.5
+Grown Organic: 	3.75
+Choux a la creme: 	2.0
+I Need ! Mug: 	12.0
+Snow Hot Choco: 	3.0
+TOTAL AMOUNT OF ORDER (inc Discounts): 61.75
+--------------------------------------------------------------------------------- 
+Sean Order: 
+Choux à la crème: 	2.0
+Earl Grey: 	2.5
+Scottish Scone: 	4.5
+TOTAL AMOUNT OF ORDER (inc Discounts): 27.0
+--------------------------------------------------------------------------------- 
+Lucy Order: 
+Happy Holidays: 	3.75
+I Need ! Toque: 	23.0
+Raspberry Muffin: 	2.0
+Tradition Chai: 	2.5
+TOTAL AMOUNT OF ORDER (inc Discounts): 33.75
+--------------------------------------------------------------------------------- 
+Emma Order: 
+Chouquettes 20u: 	1.5
+Paris Brest: 	3.5
+I Need ! Scarf: 	120.0
+Cappuccino: 	3.75
+TOTAL AMOUNT OF ORDER (inc Discounts): 141.0
+--------------------------------------------------------------------------------- 
+Jessica Order: 
+Lemon Grass: 	2.5
+Spicy Eye Open: 	2.5
+TOTAL AMOUNT OF ORDER (inc Discounts): 10.0
+--------------------------------------------------------------------------------- 
+Robin Order: 
+Eclair Coffee: 	2.5
+English Break: 	2.5
+TOTAL AMOUNT OF ORDER (inc Discounts): 10.0
+--------------------------------------------------------------------------------- 
+Henry Order: 
+Flan Vanille: 	2.0
+TOTAL AMOUNT OF ORDER (inc Discounts): 2.0
+--------------------------------------------------------------------------------- 
+Anna Order: 
+Rio Nights: 	6.0
+Choco Croissant: 	3.75
+TOTAL AMOUNT OF ORDER (inc Discounts): 13.5
+--------------------------------------------------------------------------------- 
+GLOBAL NET INCOME == 506.06
