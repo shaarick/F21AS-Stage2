@@ -14,19 +14,17 @@ public class StaffGUI extends JFrame implements Observer {
 	protected static Integer count = 0;
 	
 	public StaffGUI(String name, Staff staff) {
+		StaffGUI.count++;
 		setSize(300,300);
 		setVisible(true);
 		setTitle(name);
 		
-		if(StaffGUI.count == 1) {
+		if(StaffGUI.count == 0) {
 			setLocation(0, 375);	
-			count++;
+		} else if(StaffGUI.count == 1) {
+			setLocation(301, 375);
 		} else if(StaffGUI.count == 2) {
-			setLocation(301, 375);	
-			count++;
-		} else if(StaffGUI.count == 3) {
 			setLocation(601, 375);	
-			count++;
 		}
         
 		GridLayout grid = new GridLayout(0,1,0,0);
@@ -47,7 +45,7 @@ public class StaffGUI extends JFrame implements Observer {
 		this.staff = staff;
 		this.staff.registerObserver(this);
 	}
-
+	
 	
 	public void update() {
 		for(Item i: staff.getCurrent().getItemsOrdered()) {
@@ -58,4 +56,5 @@ public class StaffGUI extends JFrame implements Observer {
 		str = "";
 		disc.setText(staff.getCurrent().getDiscountLine());
 	}
+	
 }

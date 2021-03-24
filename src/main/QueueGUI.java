@@ -1,37 +1,45 @@
 package main;
 
 import java.awt.BorderLayout;
+import java.awt.Point;
 
 import javax.swing.*;
 
 @SuppressWarnings("serial")
 public class QueueGUI extends JFrame implements Observer2{
-	JLabel label;
+	JLabel label, label2;
 	Queue<Customer> queue;
 	DefaultListModel<String> model = new DefaultListModel<>();
-	private static Integer count = 0;
+	protected static Integer count = 0;
+	protected static Point point;
 	public QueueGUI(Queue<Customer> queue) {
+		QueueGUI.count++;
 		this.queue = queue;
 		
 		this.setSize(600, 350);
         this.setTitle("Queue");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        this.setLocationRelativeTo(null);
 		
         label = new JLabel("There are currently no people waiting in the queue.");
-        add(label, BorderLayout.PAGE_START);
-     
+        label2 = new JLabel("Serving:");
+        
+        JPanel top = new JPanel(new BorderLayout());
+        top.add(label, BorderLayout.PAGE_START);
+        top.add(label2, BorderLayout.PAGE_END);
+        this.add(top, BorderLayout.PAGE_START);
+        
+
         JList<String> list = new JList<>(model);
-        this.add(list);
+
+        add(list);
         
         setVisible(true);
+		QueueGUI.point = this.getLocationOnScreen();
 	}
 	@Override
 	public void update(Customer c) {
-		QueueGUI.count++;
-		// 0 or 1 Queue size
 		if (!queue.isTerminated()) {
-			label.setText("There are currently " + queue.size() + " people waiting in the queue:");	
+			label.setText("There are currently " + queue.size() + " people waiting in the queue.");	
 		} else {
 			label.setText("Finished serving all customers in the queue.");
 		}
