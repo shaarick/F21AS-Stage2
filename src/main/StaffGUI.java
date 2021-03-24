@@ -1,28 +1,31 @@
 package main;
 
-import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
 import javax.swing.*;
 
+@SuppressWarnings("serial")
 public class StaffGUI extends JFrame implements Observer {
 	JLabel display;
 	JTextArea textArea;
 	Staff staff;
 	String str;
 	JLabel disc;
-	private static Integer count = 0;
+	protected static Integer count = 0;
 	
 	public StaffGUI(String name, Staff staff) {
 		setSize(300,300);
 		setVisible(true);
 		setTitle(name);
 		
-		if(StaffGUI.count == 0) {
+		if(StaffGUI.count == 1) {
 			setLocation(0, 375);	
 			count++;
-		} else if(StaffGUI.count == 1) {
+		} else if(StaffGUI.count == 2) {
 			setLocation(301, 375);	
+			count++;
+		} else if(StaffGUI.count == 3) {
+			setLocation(601, 375);	
 			count++;
 		}
         
@@ -44,6 +47,7 @@ public class StaffGUI extends JFrame implements Observer {
 		this.staff = staff;
 		this.staff.registerObserver(this);
 	}
+
 	
 	public void update() {
 		for(Item i: staff.getCurrent().getItemsOrdered()) {
