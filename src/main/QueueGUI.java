@@ -1,11 +1,12 @@
 package main;
 
 import java.awt.*;
+import java.awt.event.*;
 
 import javax.swing.*;
 
 @SuppressWarnings("serial")
-public class QueueGUI extends JFrame implements Observer2{
+public class QueueGUI extends JFrame implements Observer2, ActionListener{
 	JLabel label, label2, time;
 	JButton increaseTime, decreaseTime;
 	Queue<Customer> queue;
@@ -22,9 +23,11 @@ public class QueueGUI extends JFrame implements Observer2{
 		
         label = new JLabel("There are currently no people waiting in the queue.");
         label2 = new JLabel("Serving:");
-        time = new JLabel(Main.time+"",JLabel.CENTER);
+        time = new JLabel(Main.getTime()+"",JLabel.CENTER);
         increaseTime = new JButton("Increase Time");
+        increaseTime.addActionListener(this);
         decreaseTime = new JButton("Decrease Time");
+        decreaseTime.addActionListener(this);
         
         JPanel top = new JPanel(new BorderLayout());
         top.add(label, BorderLayout.PAGE_START);
@@ -70,6 +73,28 @@ public class QueueGUI extends JFrame implements Observer2{
 		}
 
 		
+	}
+
+	public void actionPerformed(ActionEvent event) {
+		if(event.getSource()==increaseTime) {
+			Main.setTime(Main.getTime()+100);
+			time.setText(Main.getTime()+"");
+			if(Main.getTime()>=5000) {
+				increaseTime.setEnabled(false);
+			}
+			if(!decreaseTime.isEnabled())
+				decreaseTime.setEnabled(true);
+		}
+		
+		if(event.getSource()==decreaseTime) {
+			Main.setTime(Main.getTime()-100);
+			time.setText(Main.getTime()+"");
+			if(Main.getTime()<=100) {
+				decreaseTime.setEnabled(false);
+			}
+			if(!increaseTime.isEnabled())
+				increaseTime.setEnabled(true);
+		}
 	}
 	
 }
