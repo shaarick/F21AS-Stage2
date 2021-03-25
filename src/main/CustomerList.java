@@ -60,7 +60,7 @@ public class CustomerList implements Runnable, Subject2{
     public void run() {
     	registerObserver(new QueueGUI(this.queue));
     	for (Customer c : customerList) {
-	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * 1000));}
+	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * Main.getTime()));}
 	    catch (InterruptedException e) {}
 	    queue.enqueue(c);
 	    notifyObservers(c);
