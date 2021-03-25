@@ -13,6 +13,7 @@ public class Main {
 	public static LogClass log;
 	public static CustomerList customerList;
 	private final static Path p = Paths.get("Report.txt").toAbsolutePath(); //stores the path (works on any system)
+	protected static Integer time = 1000;
 	
 	public static void main (String [] args) throws InterruptedException {
 		

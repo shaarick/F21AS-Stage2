@@ -1,13 +1,13 @@
 package main;
 
-import java.awt.BorderLayout;
-import java.awt.Point;
+import java.awt.*;
 
 import javax.swing.*;
 
 @SuppressWarnings("serial")
 public class QueueGUI extends JFrame implements Observer2{
-	JLabel label, label2;
+	JLabel label, label2, time;
+	JButton increaseTime, decreaseTime;
 	Queue<Customer> queue;
 	DefaultListModel<String> model = new DefaultListModel<>();
 	protected static Integer count = 0;
@@ -22,6 +22,9 @@ public class QueueGUI extends JFrame implements Observer2{
 		
         label = new JLabel("There are currently no people waiting in the queue.");
         label2 = new JLabel("Serving:");
+        time = new JLabel(Main.time+"",JLabel.CENTER);
+        increaseTime = new JButton("Increase Time");
+        decreaseTime = new JButton("Decrease Time");
         
         JPanel top = new JPanel(new BorderLayout());
         top.add(label, BorderLayout.PAGE_START);
@@ -32,6 +35,12 @@ public class QueueGUI extends JFrame implements Observer2{
         JList<String> list = new JList<>(model);
 
         add(list);
+
+        JPanel bottom = new JPanel(new GridLayout(1,3));
+        bottom.add(decreaseTime);
+        bottom.add(time);
+        bottom.add(increaseTime);
+        this.add(bottom, BorderLayout.PAGE_END);
         
         setVisible(true);
 		QueueGUI.point = this.getLocationOnScreen();
