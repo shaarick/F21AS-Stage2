@@ -36,8 +36,8 @@ public class QueueGUI extends JFrame implements Observer2, ActionListener{
         
 
         JList<String> list = new JList<>(model);
-
-        add(list);
+		JScrollPane scroll = new JScrollPane(list);
+		this.add(scroll);
 
         JPanel bottom = new JPanel(new GridLayout(1,3));
         bottom.add(decreaseTime);
@@ -50,12 +50,7 @@ public class QueueGUI extends JFrame implements Observer2, ActionListener{
 	}
 	@Override
 	public void update(Customer c) {
-		if (!queue.isTerminated()) {
-			label.setText("There are currently " + queue.size() + " people waiting in the queue.");	
-		} else {
-			label.setText("Finished serving all customers in the queue.");
-		}
-		
+		label.setText("There are currently " + queue.size() + " people waiting in the queue.");	
 		if((queue.size() >1) & (StaffGUI.count < 4)) {
 			String name = "Server " + (StaffGUI.count + 1);
 			Staff three = new Staff(name, queue);
@@ -72,6 +67,13 @@ public class QueueGUI extends JFrame implements Observer2, ActionListener{
 		}
 
 		
+	}
+	
+	@Override
+	public void update() {
+		if (queue.getDone() == true) {
+			label.setText("Finished serving all customers in the queue.");
+		} 
 	}
 
 	public void actionPerformed(ActionEvent event) {

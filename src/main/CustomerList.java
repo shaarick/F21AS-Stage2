@@ -69,6 +69,7 @@ public class CustomerList implements Runnable, Subject2{
 	    //System.out.println(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
 	}
 	queue.setDone();
+	notifyObservers();
 	LogClass.logger.info("Orders list is empty");
 	//	System.out.println("Orders list is empty");
     }
@@ -90,6 +91,13 @@ public class CustomerList implements Runnable, Subject2{
 		// TODO Auto-generated method stub
 		for(Observer2 observer: gui) {
 			observer.update(c);
+		}
+	}
+	
+	@Override
+	public void notifyObservers() {
+		for(Observer2 observer: gui) {
+			observer.update();
 		}
 	}
     
