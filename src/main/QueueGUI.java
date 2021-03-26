@@ -57,8 +57,7 @@ public class QueueGUI extends JFrame implements Observer2, ActionListener{
 		}
 		
 		if((queue.size() >1) & (StaffGUI.count < 4)) {
-			StaffGUI.count++;
-			String name = "Server " + StaffGUI.count;
+			String name = "Server " + (StaffGUI.count + 1);
 			Staff three = new Staff(name, queue);
 			Thread serverThree = new Thread(three, name);
 			serverThree.start();
