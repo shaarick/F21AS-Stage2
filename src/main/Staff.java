@@ -22,7 +22,6 @@ public class Staff implements Runnable, Subject {
 
 	public void run() {
 		registerObserver(new StaffGUI(name,this));
-		StaffGUI.count++;
 		while (!queue.isTerminated()) {
 			current = queue.dequeue();
 			if (!(current == null)) {
