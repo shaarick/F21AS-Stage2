@@ -19,14 +19,6 @@ public class StaffGUI extends JFrame implements Observer {
 		setTitle(name);
 		
 		setLocation();
-		
-		if(StaffGUI.count == 0) {
-			setLocation(0, 375);	
-		} else if(StaffGUI.count == 1) {
-			setLocation(301, 375);
-		} else if(StaffGUI.count == 2) {
-			setLocation(601, 375);	
-		}
         
 		GridLayout grid = new GridLayout(0,1,0,0);
 		this.setLayout(grid);
