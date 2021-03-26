@@ -6,11 +6,13 @@ import java.awt.event.*;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
-public class QueueGUI extends JFrame implements Observer2, ActionListener{
-	JLabel label, label2, time;
+public class QueueGUI extends JFrame implements Observer, Observer2, ActionListener{
+	
+	JLabel label, label2, label3, time;
 	JButton increaseTime, decreaseTime;
 	Queue<Customer> queue;
 	DefaultListModel<String> model = new DefaultListModel<>();
+	DefaultListModel<String> model2 = new DefaultListModel<>();
 	protected static Integer count = 0;
 	protected static Point point;
 	public QueueGUI(Queue<Customer> queue) {
@@ -21,8 +23,10 @@ public class QueueGUI extends JFrame implements Observer2, ActionListener{
         this.setTitle("Queue");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-        label = new JLabel("There are currently no people waiting in the queue.");
-        label2 = new JLabel("Serving:");
+        label = new JLabel("There are currently no people waiting in the queue.", SwingConstants.CENTER);
+        label2 = new JLabel("Serving:",SwingConstants.CENTER);
+        label3 = new JLabel("Finished Serving:",SwingConstants.CENTER);
+        
         time = new JLabel(Main.getTime()+"",JLabel.CENTER);
         increaseTime = new JButton("Increase Time");
         increaseTime.addActionListener(this);
@@ -31,19 +35,25 @@ public class QueueGUI extends JFrame implements Observer2, ActionListener{
         
         JPanel top = new JPanel(new BorderLayout());
         top.add(label, BorderLayout.PAGE_START);
-        top.add(label2, BorderLayout.PAGE_END);
-        this.add(top, BorderLayout.PAGE_START);
+        top.add(label2, BorderLayout.WEST);
+        top.add(label3, BorderLayout.EAST);
+        getContentPane().add(top, BorderLayout.PAGE_START);
         
-
+        JPanel middle = new JPanel(new GridLayout(0,2));
         JList<String> list = new JList<>(model);
 		JScrollPane scroll = new JScrollPane(list);
-		this.add(scroll);
+		middle.add(scroll);
+		
+		JList<String> list2 = new JList<>(model2);
+		JScrollPane scroll2 = new JScrollPane(list2);
+		middle.add(scroll2);
+		this.add(middle);
 
         JPanel bottom = new JPanel(new GridLayout(1,3));
         bottom.add(decreaseTime);
         bottom.add(time);
         bottom.add(increaseTime);
-        this.add(bottom, BorderLayout.PAGE_END);
+        getContentPane().add(bottom, BorderLayout.PAGE_END);
         
         setVisible(true);
 		QueueGUI.point = this.getLocationOnScreen();
@@ -60,10 +70,8 @@ public class QueueGUI extends JFrame implements Observer2, ActionListener{
 
 		if(c.getTotalNumberItems() == 1) {
 			model.addElement(c.getName() + " " + c.getTotalNumberItems() + " item");
-			//System.out.println(c.getName() + "is at " + model.indexOf(c.getName() + " " + c.getTotalNumberItems() + " item"));
 		} else {
 			model.addElement(c.getName() + " " + c.getTotalNumberItems() + " items");
-			//System.out.println(c.getName() + "is at " + model.indexOf(c.getName() + " " + c.getTotalNumberItems() + " items"));
 		}
 
 		

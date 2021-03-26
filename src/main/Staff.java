@@ -37,6 +37,8 @@ public class Staff implements Runnable, Subject {
 			catch (InterruptedException e) {}
 		}
 		LogClass.logger.info(Thread.currentThread().getName() + " is done working.");
+		notifyDone();
+		
 		//System.out.println(Thread.currentThread().getName() + " is done working.");
 		return;
 	}
@@ -59,4 +61,13 @@ public class Staff implements Runnable, Subject {
 			observer.update();
 		}
 	}
+
+	@Override
+	public void notifyDone() {
+		// TODO Auto-generated method stub
+		for(Observer observer: gui) {
+			observer.updateDone();
+		}
+	}
+	
 }

@@ -53,5 +53,11 @@ public class StaffGUI extends JFrame implements Observer {
 		str = "";
 		disc.setText(staff.getCurrent().getDiscountLine());
 	}
+
+	@Override
+	public void updateDone() {
+		// TODO Auto-generated method stub
+		this.dispose();
+	}
 	
 }
