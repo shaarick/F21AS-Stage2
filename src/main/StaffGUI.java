@@ -14,10 +14,11 @@ public class StaffGUI extends JFrame implements Observer {
 	protected static Integer count = 0;
 	
 	public StaffGUI(String name, Staff staff) {
-		StaffGUI.count++;
 		setSize(300,300);
 		setVisible(true);
 		setTitle(name);
+		
+		setLocation();
 		
 		if(StaffGUI.count == 0) {
 			setLocation(0, 375);	
@@ -46,6 +47,10 @@ public class StaffGUI extends JFrame implements Observer {
 		this.staff.registerObserver(this);
 	}
 	
+	public synchronized void setLocation() {
+		setLocation(300 * (Integer.parseInt(Thread.currentThread().getName().substring(7)) - 1), 375);
+		StaffGUI.count++;
+	}
 	
 	public void update() {
 		for(Item i: staff.getCurrent().getItemsOrdered()) {
