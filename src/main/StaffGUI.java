@@ -58,5 +58,11 @@ public class StaffGUI extends JFrame implements Observer {
 	public void updateDone() {
 		this.dispose();
 	}
+
+	@Override
+	public void updateServed(Customer c) {
+		display.setText("Finished serving " + c.getName());
+		
+	}
 	
 }

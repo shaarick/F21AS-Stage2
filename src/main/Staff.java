@@ -33,6 +33,7 @@ public class Staff implements Runnable, Subject {
 				catch (InterruptedException e) {}
 				LogClass.logger.info(Thread.currentThread().getName() + " has served " + current.getName());
 				//System.out.println(Thread.currentThread().getName() + " has served " + test.getName());
+				notifyServed(current);
 //				QueueGUI.decQ();
 				QueueGUI.transfer(current);
 			}
@@ -69,6 +70,13 @@ public class Staff implements Runnable, Subject {
 	public void notifyDone() {
 		for(Observer observer: gui) {
 			observer.updateDone();
+		}
+	}
+
+	@Override
+	public void notifyServed(Customer c) {
+		for(Observer observer: gui) {
+			observer.updateServed(c);
 		}
 	}
 	
