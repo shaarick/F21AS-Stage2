@@ -6,7 +6,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
-public class QueueGUI extends JFrame implements Observer, Observer2, ActionListener{
+public class QueueGUI extends JFrame implements Observer2, ActionListener{
 	
 	JLabel label, label2, label3, time;
 	JButton increaseTime, decreaseTime;
@@ -22,6 +22,11 @@ public class QueueGUI extends JFrame implements Observer, Observer2, ActionListe
 		this.setSize(600, 350);
         this.setTitle("Queue");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                Main.writeReport();
+            }
+        });
 		
         label = new JLabel("There are currently no people waiting in the queue.", SwingConstants.CENTER);
         label2 = new JLabel("Serving:",SwingConstants.CENTER);
