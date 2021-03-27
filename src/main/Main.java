@@ -27,6 +27,9 @@ public class Main {
 		//Reading the OrdersList and filling up the customerList
 		i.readFile("OrdersList.txt");
 		
+		//Starting the QueueGUI
+		QueueGUI q = new QueueGUI();
+		QueueGUI.Q = queue;
 		//Starting up the producer thread
 		//and passing the customers from the customerList
 		//to the queue
@@ -42,10 +45,6 @@ public class Main {
 		Staff two = new Staff("Server 2", queue);
 		Thread serverTwo = new Thread(two, "Server 2");
 		serverTwo.start();
-//
-//		Staff three = new Staff("Server 3", queue);
-//		Thread serverThree = new Thread(three, "Server 3");
-//		serverThree.start();
 		
 	}
 

@@ -13,10 +13,9 @@ import java.util.Set;
  * @author Nicolas JEAN - nj2000 - H00359359
  */
 
-public class CustomerList implements Runnable, Subject2{
+public class CustomerList implements Runnable {
     private Set<Customer> customerList;
     private Queue<Customer> queue;
-    private List<Observer2> gui;
 	
     /**
      * Creates an CustomerList object.
@@ -25,7 +24,6 @@ public class CustomerList implements Runnable, Subject2{
     public CustomerList(Queue<Customer> queueIn) {
 	customerList = new HashSet<Customer>();
 	queue = queueIn;
-	gui = new LinkedList<Observer2>();
     };
 	
     public Set<Customer> getCustomerList() { return customerList; }
@@ -58,48 +56,18 @@ public class CustomerList implements Runnable, Subject2{
      * by feeding the queue with customers.
      */
     public void run() {
-    	registerObserver(new QueueGUI(this.queue));
     	for (Customer c : customerList) {
 	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * Main.getTime()));}
 	    catch (InterruptedException e) {}
 	    queue.enqueue(c);
-	    notifyObservers(c);
 	    LogClass.logger.info(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
+	    QueueGUI.update(c);
 	    
 	    //System.out.println(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
 	}
 	queue.setDone();
-	notifyObservers();
 	LogClass.logger.info("Orders list is empty");
 	//	System.out.println("Orders list is empty");
     }
-
-	@Override
-	public void registerObserver(Observer2 observer) {
-		// TODO Auto-generated method stub
-		gui.add(observer);
-	}
-
-	@Override
-	public void removeObserver(Observer2 observer) {
-		// TODO Auto-generated method stub
-		gui.remove(observer);
-	}
-
-	@Override
-	public void notifyObservers(Customer c) {
-		// TODO Auto-generated method stub
-		for(Observer2 observer: gui) {
-			observer.update(c);
-		}
-	}
-	
-	@Override
-	public void notifyObservers() {
-		for(Observer2 observer: gui) {
-			observer.update();
-		}
-	}
-    
 
 }

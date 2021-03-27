@@ -20,6 +20,7 @@ public class Staff implements Runnable, Subject {
 		gui = new LinkedList<Observer>();
 	}
 
+	@SuppressWarnings("static-access")
 	public void run() {
 		registerObserver(new StaffGUI(name,this));
 		while (!queue.isTerminated()) {
@@ -32,6 +33,8 @@ public class Staff implements Runnable, Subject {
 				catch (InterruptedException e) {}
 				LogClass.logger.info(Thread.currentThread().getName() + " has served " + current.getName());
 				//System.out.println(Thread.currentThread().getName() + " has served " + test.getName());
+//				QueueGUI.decQ();
+				QueueGUI.transfer(current);
 			}
 			try { Thread.currentThread().sleep(1000); }
 			catch (InterruptedException e) {}
@@ -64,7 +67,6 @@ public class Staff implements Runnable, Subject {
 
 	@Override
 	public void notifyDone() {
-		// TODO Auto-generated method stub
 		for(Observer observer: gui) {
 			observer.updateDone();
 		}

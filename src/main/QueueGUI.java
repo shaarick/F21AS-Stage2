@@ -6,18 +6,17 @@ import java.awt.event.*;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
-public class QueueGUI extends JFrame implements Observer2, ActionListener{
+public class QueueGUI extends JFrame implements ActionListener{
 	
-	JLabel label, label2, label3, time;
-	JButton increaseTime, decreaseTime;
-	Queue<Customer> queue;
-	DefaultListModel<String> model = new DefaultListModel<>();
-	DefaultListModel<String> model2 = new DefaultListModel<>();
-	protected static Integer count = 0;
-	protected static Point point;
-	public QueueGUI(Queue<Customer> queue) {
-		QueueGUI.count++;
-		this.queue = queue;
+	protected static JLabel label;
+	private JLabel label2, label3, time;
+	private JButton increaseTime, decreaseTime;
+	protected static Integer qCount = 0;
+	protected static DefaultListModel<String> model = new DefaultListModel<>();
+	protected static DefaultListModel<String> model2 = new DefaultListModel<>();
+	protected static Queue<Customer> Q;
+
+	public QueueGUI() {
 		
 		this.setSize(600, 350);
         this.setTitle("Queue");
@@ -28,32 +27,32 @@ public class QueueGUI extends JFrame implements Observer2, ActionListener{
             }
         });
 		
-        label = new JLabel("There are currently no people waiting in the queue.", SwingConstants.CENTER);
+        QueueGUI.label = new JLabel("There are currently no people waiting in the queue.", SwingConstants.CENTER);
         label2 = new JLabel("Serving:",SwingConstants.CENTER);
         label3 = new JLabel("Finished Serving:",SwingConstants.CENTER);
         
+        JPanel top = new JPanel(new BorderLayout());
+        top.add(QueueGUI.label, BorderLayout.PAGE_START);
+        top.add(label2, BorderLayout.WEST);
+        top.add(label3, BorderLayout.EAST);
+        getContentPane().add(top, BorderLayout.PAGE_START);
+        
+        JPanel middle = new JPanel(new GridLayout(0,2));
+        JList<String> list = new JList<>( QueueGUI.model);
+		JScrollPane scroll = new JScrollPane(list);
+		middle.add(scroll);
+		
+		JList<String> list2 = new JList<>( QueueGUI.model2);
+		JScrollPane scroll2 = new JScrollPane(list2);
+		middle.add(scroll2);
+		this.add(middle);
+
         time = new JLabel(Main.getTime()+"",JLabel.CENTER);
         increaseTime = new JButton("Increase Time");
         increaseTime.addActionListener(this);
         decreaseTime = new JButton("Decrease Time");
         decreaseTime.addActionListener(this);
         
-        JPanel top = new JPanel(new BorderLayout());
-        top.add(label, BorderLayout.PAGE_START);
-        top.add(label2, BorderLayout.WEST);
-        top.add(label3, BorderLayout.EAST);
-        getContentPane().add(top, BorderLayout.PAGE_START);
-        
-        JPanel middle = new JPanel(new GridLayout(0,2));
-        JList<String> list = new JList<>(model);
-		JScrollPane scroll = new JScrollPane(list);
-		middle.add(scroll);
-		
-		JList<String> list2 = new JList<>(model2);
-		JScrollPane scroll2 = new JScrollPane(list2);
-		middle.add(scroll2);
-		this.add(middle);
-
         JPanel bottom = new JPanel(new GridLayout(1,3));
         bottom.add(decreaseTime);
         bottom.add(time);
@@ -61,32 +60,52 @@ public class QueueGUI extends JFrame implements Observer2, ActionListener{
         getContentPane().add(bottom, BorderLayout.PAGE_END);
         
         setVisible(true);
-		QueueGUI.point = this.getLocationOnScreen();
 	}
-	@Override
-	public void update(Customer c) {
-		label.setText("There are currently " + queue.size() + " people waiting in the queue.");	
-		if((queue.size() >1) & (StaffGUI.count < 4)) {
+
+	public synchronized static void update(Customer c) {
+		
+		if(c.getTotalNumberItems() == 1) {
+			 QueueGUI.model.addElement(c.getName() + " " + c.getTotalNumberItems() + " item");
+		} else {
+			 QueueGUI.model.addElement(c.getName() + " " + c.getTotalNumberItems() + " items");
+		}
+		QueueGUI.incQ();
+		QueueGUI.label.setText("There are currently " + QueueGUI.qCount + " people waiting in the queue.");
+		
+		if((QueueGUI.qCount > 2) & (StaffGUI.count < 3)) {
 			String name = "Server " + (StaffGUI.count + 1);
-			Staff three = new Staff(name, queue);
+			Staff three = new Staff(name, QueueGUI.Q);
 			Thread serverThree = new Thread(three, name);
 			serverThree.start();
 		}
-
-		if(c.getTotalNumberItems() == 1) {
-			model.addElement(c.getName() + " " + c.getTotalNumberItems() + " item");
-		} else {
-			model.addElement(c.getName() + " " + c.getTotalNumberItems() + " items");
-		}
-
 		
 	}
 	
-	@Override
-	public void update() {
-		if (queue.getDone() == true) {
-			label.setText("Finished serving all customers in the queue.");
-		} 
+	public static synchronized void incQ() {
+		QueueGUI.qCount++ ;
+	}
+	
+	public static synchronized void decQ() {
+		QueueGUI.qCount-- ;
+	}
+	
+	public synchronized static void transfer(Customer c) {
+			String str;
+			if(c.getTotalNumberItems() == 1) {
+				str = c.getName() + " " + c.getTotalNumberItems() + " item";
+			} else {
+				str = c.getName() + " " + c.getTotalNumberItems() + " items";
+			}
+			
+			QueueGUI.model.removeElement(str);
+			QueueGUI.model2.addElement(c.getName());
+			QueueGUI.decQ();
+			if (QueueGUI.qCount == 0) {
+				QueueGUI.label.setText("Finished serving all customers in the queue.");	
+			} else {
+				QueueGUI.label.setText("There are currently " + QueueGUI.qCount + " people waiting in the queue.");	
+			}
+
 	}
 
 	public void actionPerformed(ActionEvent event) {
