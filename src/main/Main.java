@@ -13,9 +13,6 @@ public class Main {
 	public static LogClass log;
 	public static CustomerList customerList;
 	private final static Path p = Paths.get("Report.txt").toAbsolutePath(); //stores the path (works on any system)
-	private static int time = 1000;
-	private static int qtime = 1000;
-	private static int rtime = 1000;
 	
 	public static void main (String [] args) throws InterruptedException {
 		
@@ -32,6 +29,7 @@ public class Main {
 		//Starting the QueueGUI
 		QueueGUI q = new QueueGUI();
 		QueueGUI.Q = queue;
+		QueueController controller = new QueueController(q);
 		//Starting up the producer thread
 		//and passing the customers from the customerList
 		//to the queue
@@ -77,29 +75,5 @@ public class Main {
 			System.err.println("CANT WRITE TO FILE, DOESNT EXIST");
 			e.printStackTrace();
 		}
-	}
-	
-	protected static int getTime() {
-		return Main.time;
-	}
-	
-	protected static void setTime(int time) {
-		Main.time = time;
-	}
-	
-	protected static int getQTime() {
-		return Main.qtime;
-	}
-	
-	protected static void setQTime(int time) {
-		Main.qtime = time;
-	}
-	
-	protected static int getRTime() {
-		return Main.rtime;
-	}
-	
-	protected static void setRTime(int time) {
-		Main.rtime = time;
 	}
 }

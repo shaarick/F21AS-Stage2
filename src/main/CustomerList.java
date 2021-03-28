@@ -16,6 +16,9 @@ import java.util.Set;
 public class CustomerList implements Runnable {
     private Set<Customer> customerList;
     private Queue<Customer> queue;
+	private static int time = 1000;
+	private static int qtime = 1000;
+	private static int rtime = 1000;
 	
     /**
      * Creates an CustomerList object.
@@ -57,7 +60,7 @@ public class CustomerList implements Runnable {
      */
     public void run() {
     	for (Customer c : customerList) {
-	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * Main.getQTime()));}
+	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * CustomerList.getQTime()));}
 	    catch (InterruptedException e) {}
 	    queue.enqueue(c);
 	    LogClass.logger.info(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
@@ -69,5 +72,29 @@ public class CustomerList implements Runnable {
 	LogClass.logger.info("Orders list is empty");
 	//	System.out.println("Orders list is empty");
     }
+	
+	protected static int getTime() {
+		return CustomerList.time;
+	}
+	
+	protected static void setTime(int time) {
+		CustomerList.time = time;
+	}
+	
+	protected static int getQTime() {
+		return CustomerList.qtime;
+	}
+	
+	protected static void setQTime(int time) {
+		CustomerList.qtime = time;
+	}
+	
+	protected static int getRTime() {
+		return CustomerList.rtime;
+	}
+	
+	protected static void setRTime(int time) {
+		CustomerList.rtime = time;
+	}
 
 }

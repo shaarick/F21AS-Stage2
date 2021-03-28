@@ -29,7 +29,7 @@ public class Staff implements Runnable, Subject {
 				LogClass.logger.info(Thread.currentThread().getName() + " is serving " + current.getName());
 				notifyObservers();
 				//System.out.println(Thread.currentThread().getName() + " is serving " + test.getName());
-				try { Thread.currentThread().sleep(current.getTotalNumberItems() * Main.getTime()); }
+				try { Thread.currentThread().sleep(current.getTotalNumberItems() * CustomerList.getTime()); }
 				catch (InterruptedException e) {}
 				LogClass.logger.info(Thread.currentThread().getName() + " has served " + current.getName());
 				//System.out.println(Thread.currentThread().getName() + " has served " + test.getName());
@@ -37,7 +37,7 @@ public class Staff implements Runnable, Subject {
 //				QueueGUI.decQ();
 				QueueGUI.transfer(current);
 			}
-			try { Thread.currentThread().sleep(Main.getRTime()); }
+			try { Thread.currentThread().sleep(CustomerList.getRTime()); }
 			catch (InterruptedException e) {}
 		}
 		LogClass.logger.info(Thread.currentThread().getName() + " is done working.");
