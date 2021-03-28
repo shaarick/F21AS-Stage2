@@ -37,7 +37,7 @@ public class Staff implements Runnable, Subject {
 //				QueueGUI.decQ();
 				QueueGUI.transfer(current);
 			}
-			try { Thread.currentThread().sleep(1000); }
+			try { Thread.currentThread().sleep(Main.getRTime()); }
 			catch (InterruptedException e) {}
 		}
 		LogClass.logger.info(Thread.currentThread().getName() + " is done working.");

@@ -9,8 +9,10 @@ import javax.swing.*;
 public class QueueGUI extends JFrame implements ActionListener{
 	
 	protected static JLabel label;
-	private JLabel label2, label3, time;
+	private JLabel label2, label3, time, qtime, rtime;
 	private JButton increaseTime, decreaseTime;
+	private JButton qincrease, qdecrease;
+	private JButton rincrease, rdecrease;
 	protected static Integer qCount = 0;
 	protected static DefaultListModel<String> model = new DefaultListModel<>();
 	protected static DefaultListModel<String> model2 = new DefaultListModel<>();
@@ -46,17 +48,36 @@ public class QueueGUI extends JFrame implements ActionListener{
 		JScrollPane scroll2 = new JScrollPane(list2);
 		middle.add(scroll2);
 		this.add(middle);
-
-        time = new JLabel(Main.getTime()+"",JLabel.CENTER);
-        increaseTime = new JButton("Increase Time");
+		
+		time = new JLabel(Main.getTime()+"",JLabel.CENTER);
+        increaseTime = new JButton("Decrease Serving Speed");
         increaseTime.addActionListener(this);
-        decreaseTime = new JButton("Decrease Time");
+        decreaseTime = new JButton("Increase Serving Speed");
         decreaseTime.addActionListener(this);
         
-        JPanel bottom = new JPanel(new GridLayout(1,3));
-        bottom.add(decreaseTime);
+        qtime = new JLabel(Main.getQTime()+"",JLabel.CENTER);
+        qincrease = new JButton("Increase Enqueue Time");
+        qincrease.addActionListener(this);
+        qdecrease = new JButton("Decrease Enqueue Time");
+        qdecrease.addActionListener(this);
+        
+        rtime = new JLabel(Main.getRTime()+"",JLabel.CENTER);
+        rincrease = new JButton("Increase Resting Time");
+        rincrease.addActionListener(this);
+        rdecrease = new JButton("Decrease Resting Time");
+        rdecrease.addActionListener(this);
+        
+        JPanel bottom = new JPanel(new GridLayout(3,3));
+        bottom.add(qtime);
         bottom.add(time);
+        bottom.add(rtime);
+        bottom.add(qincrease);
+        bottom.add(decreaseTime);
+        bottom.add(rincrease);
+        bottom.add(qdecrease);
         bottom.add(increaseTime);
+        bottom.add(rdecrease);
+
         getContentPane().add(bottom, BorderLayout.PAGE_END);
         
         setVisible(true);
@@ -128,6 +149,47 @@ public class QueueGUI extends JFrame implements ActionListener{
 			if(!increaseTime.isEnabled())
 				increaseTime.setEnabled(true);
 		}
+		
+		if(event.getSource()==qincrease) {
+			Main.setQTime(Main.getQTime()+100);
+			qtime.setText(Main.getQTime()+"");
+			if(Main.getQTime()>=5000) {
+				qincrease.setEnabled(false);
+			}
+			if(!qdecrease.isEnabled())
+				qdecrease.setEnabled(true);
+		}
+		
+		if(event.getSource()==qdecrease) {
+			Main.setQTime(Main.getQTime()-100);
+			qtime.setText(Main.getQTime()+"");
+			if(Main.getQTime()<=100) {
+				qdecrease.setEnabled(false);
+			}
+			if(!qincrease.isEnabled())
+				qincrease.setEnabled(true);
+		}
+		
+		if(event.getSource()==rincrease) {
+			Main.setRTime(Main.getRTime()+100);
+			rtime.setText(Main.getRTime()+"");
+			if(Main.getRTime()>=5000) {
+				rincrease.setEnabled(false);
+			}
+			if(!rdecrease.isEnabled())
+				rdecrease.setEnabled(true);
+		}
+		
+		if(event.getSource()==rdecrease) {
+			Main.setRTime(Main.getRTime()-100);
+			rtime.setText(Main.getRTime()+"");
+			if(Main.getRTime()<=100) {
+				rdecrease.setEnabled(false);
+			}
+			if(!rincrease.isEnabled())
+				rincrease.setEnabled(true);
+		}
+		
 	}
 	
 }

@@ -57,7 +57,7 @@ public class CustomerList implements Runnable {
      */
     public void run() {
     	for (Customer c : customerList) {
-	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * Main.getTime()));}
+	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * Main.getQTime()));}
 	    catch (InterruptedException e) {}
 	    queue.enqueue(c);
 	    LogClass.logger.info(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");

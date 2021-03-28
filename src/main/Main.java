@@ -14,6 +14,8 @@ public class Main {
 	public static CustomerList customerList;
 	private final static Path p = Paths.get("Report.txt").toAbsolutePath(); //stores the path (works on any system)
 	private static int time = 1000;
+	private static int qtime = 1000;
+	private static int rtime = 1000;
 	
 	public static void main (String [] args) throws InterruptedException {
 		
@@ -83,5 +85,21 @@ public class Main {
 	
 	protected static void setTime(int time) {
 		Main.time = time;
+	}
+	
+	protected static int getQTime() {
+		return Main.qtime;
+	}
+	
+	protected static void setQTime(int time) {
+		Main.qtime = time;
+	}
+	
+	protected static int getRTime() {
+		return Main.rtime;
+	}
+	
+	protected static void setRTime(int time) {
+		Main.rtime = time;
 	}
 }
