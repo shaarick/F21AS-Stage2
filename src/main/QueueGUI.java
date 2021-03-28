@@ -50,9 +50,9 @@ public class QueueGUI extends JFrame implements ActionListener{
 		this.add(middle);
 		
 		time = new JLabel(Main.getTime()+"",JLabel.CENTER);
-        increaseTime = new JButton("Decrease Serving Speed");
+        increaseTime = new JButton("Increase Serving Time");
         increaseTime.addActionListener(this);
-        decreaseTime = new JButton("Increase Serving Speed");
+        decreaseTime = new JButton("Decrease Serving Time");
         decreaseTime.addActionListener(this);
         
         qtime = new JLabel(Main.getQTime()+"",JLabel.CENTER);
@@ -72,10 +72,10 @@ public class QueueGUI extends JFrame implements ActionListener{
         bottom.add(time);
         bottom.add(rtime);
         bottom.add(qincrease);
-        bottom.add(decreaseTime);
+        bottom.add(increaseTime);
         bottom.add(rincrease);
         bottom.add(qdecrease);
-        bottom.add(increaseTime);
+        bottom.add(decreaseTime);
         bottom.add(rdecrease);
 
         getContentPane().add(bottom, BorderLayout.PAGE_END);
