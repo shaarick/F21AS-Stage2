@@ -17,7 +17,6 @@ public class QueueTest {
 	public void test() {
 		assertEquals(0,queue.size());
 		assertTrue(queue.isEmpty());
-		//assertNull(queue.dequeue());
 		assertNull(queue.front());
 
 		queue.enqueue("Andrew");
@@ -48,8 +47,6 @@ public class QueueTest {
 		assertTrue(queue.dequeue().equals("Nicolas"));
 		assertEquals(0,queue.size());
 		assertTrue(queue.isEmpty());
-		
-		//assertNull(queue.dequeue());
 		assertNull(queue.front());
 		
 		queue.enqueue("Rashid");
@@ -60,7 +57,6 @@ public class QueueTest {
 		assertTrue(queue.dequeue().equals("Rashid"));
 		assertEquals(0,queue.size());
 		assertTrue(queue.isEmpty());
-		//assertNull(queue.dequeue());
 		assertNull(queue.front());
 		
 	}
