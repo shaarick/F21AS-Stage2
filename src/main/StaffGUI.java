@@ -56,13 +56,8 @@ public class StaffGUI extends JFrame implements Observer {
 
 	@Override
 	public void updateDone() {
+		// TODO Auto-generated method stub
 		this.dispose();
-	}
-
-	@Override
-	public void updateServed(Customer c) {
-		display.setText("Finished serving " + c.getName());
-		
 	}
 	
 }

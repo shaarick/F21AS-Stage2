@@ -13,12 +13,10 @@ import java.util.Set;
  * @author Nicolas JEAN - nj2000 - H00359359
  */
 
-public class CustomerList implements Runnable {
+public class CustomerList implements Runnable, Subject2{
     private Set<Customer> customerList;
     private Queue<Customer> queue;
-	private static int time = 1000;
-	private static int qtime = 1000;
-	private static int rtime = 1000;
+    private List<Observer2> gui;
 	
     /**
      * Creates an CustomerList object.
@@ -27,6 +25,7 @@ public class CustomerList implements Runnable {
     public CustomerList(Queue<Customer> queueIn) {
 	customerList = new HashSet<Customer>();
 	queue = queueIn;
+	gui = new LinkedList<Observer2>();
     };
 	
     public Set<Customer> getCustomerList() { return customerList; }
@@ -59,42 +58,47 @@ public class CustomerList implements Runnable {
      * by feeding the queue with customers.
      */
     public void run() {
+    	registerObserver(new QueueGUI(this.queue));
     	for (Customer c : customerList) {
-	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * CustomerList.getQTime()));}
+	    try {Thread.currentThread().sleep((int)((Math.random()* 6 + 1) * Main.getTime()));}
 	    catch (InterruptedException e) {}
 	    queue.enqueue(c);
 	    LogClass.logger.info(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
-	    QueueGUI.update(c);
-	    
+	    notifyObservers(c);
 	    //System.out.println(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
 	}
 	queue.setDone();
+	notifyObservers();
 	LogClass.logger.info("Orders list is empty");
 	//	System.out.println("Orders list is empty");
     }
-	
-	protected static int getTime() {
-		return CustomerList.time;
+
+	@Override
+	public void registerObserver(Observer2 observer) {
+		// TODO Auto-generated method stub
+		gui.add(observer);
+	}
+
+	@Override
+	public void removeObserver(Observer2 observer) {
+		// TODO Auto-generated method stub
+		gui.remove(observer);
+	}
+
+	@Override
+	public void notifyObservers(Customer c) {
+		// TODO Auto-generated method stub
+		for(Observer2 observer: gui) {
+			observer.update(c);
+		}
 	}
 	
-	protected static void setTime(int time) {
-		CustomerList.time = time;
+	@Override
+	public void notifyObservers() {
+		for(Observer2 observer: gui) {
+			observer.update();
+		}
 	}
-	
-	protected static int getQTime() {
-		return CustomerList.qtime;
-	}
-	
-	protected static void setQTime(int time) {
-		CustomerList.qtime = time;
-	}
-	
-	protected static int getRTime() {
-		return CustomerList.rtime;
-	}
-	
-	protected static void setRTime(int time) {
-		CustomerList.rtime = time;
-	}
+    
 
 }
