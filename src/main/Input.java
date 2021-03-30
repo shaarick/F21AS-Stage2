@@ -52,8 +52,8 @@ public class Input {
 			        	if (!customerNameTemp.equals("")) {
 			        		customer.setTotalOrderAmount();
 						customer.setTotalNumberItems();
-						LogClass.logger.info(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "Â£.");
-						//System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "Â£.");
+						LogClass.logger.info(customer.getName() + "'s total order amount: £" + customer.getTotalOrderAmount() + ".");
+						//System.out.println(customer.getName() + "'s total order amount: £" + customer.getTotalOrderAmount() + ".");
 			        		customerList.addCustomerToList(customer);
 			        	}
 			        	customerNameTemp = customerName;
@@ -67,8 +67,8 @@ public class Input {
 			//to add the last customer of the list
 			customer.setTotalOrderAmount();
 			customer.setTotalNumberItems();
-    		LogClass.logger.info(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "Â£.");        
-			//System.out.println(customer.getName() + "'s total order amount: " + customer.getTotalOrderAmount() + "Â£.");
+    		LogClass.logger.info(customer.getName() + "'s total order amount: £" + customer.getTotalOrderAmount() + ".");        
+			//System.out.println(customer.getName() + "'s total order amount: £" + customer.getTotalOrderAmount() + ".");
 			customerList.addCustomerToList(customer);
 			LogClass.logger.info("-----------------------------------------------------------------------------------------");
 			//System.out.println("-----------------------------------------------------------------------------------------");

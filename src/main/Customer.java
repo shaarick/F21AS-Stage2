@@ -77,9 +77,9 @@ public class Customer {
 	    }
 	}
 	itemsOrdered.add(item);
-	LogClass.logger.info("-> " + item.getName() + ", " + item.getQuantity() + ", at " + item.getPrice() + " Â£ each for a total of " + item.getPriceTotal() + "Â£, added to " + getName() + "'s order.");
+	LogClass.logger.info("-> " + item.getName() + ", " + item.getQuantity() + ", at £" + item.getPrice() + " each for a total of £" + item.getPriceTotal() + ", added to " + getName() + "'s order.");
 	
-	//System.out.println("-> " + item.getName() + ", " + item.getQuantity() + ", at " + item.getPrice() + " Â£ each for a total of " + item.getPriceTotal() + "Â£, added to " + getName() + "'s order.");
+	//System.out.println("-> " + item.getName() + ", " + item.getQuantity() + ", at £" + item.getPrice() + " each for a total of £" + item.getPriceTotal() + ", added to " + getName() + "'s order.");
 	return;
     }
 	
