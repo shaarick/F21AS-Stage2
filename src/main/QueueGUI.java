@@ -76,6 +76,7 @@ public class QueueGUI extends JFrame {
         getContentPane().add(bottom, BorderLayout.PAGE_END);
         
         setVisible(true);
+        LogClass.logger.info("GUI Initialised");
 	}
 
 	public synchronized static void update(Customer c) {
@@ -88,11 +89,12 @@ public class QueueGUI extends JFrame {
 		QueueGUI.incQ();
 		QueueGUI.label.setText("There are currently " + QueueGUI.qCount + " people waiting in the queue.");
 		
-		if((QueueGUI.qCount > 2) & (StaffGUI.count < 3)) {
+		if((QueueGUI.qCount >= 4) & (StaffGUI.count < 3)) {
 			String name = "Server " + (StaffGUI.count + 1);
 			Staff three = new Staff(name, QueueGUI.Q);
 			Thread serverThree = new Thread(three, name);
 			serverThree.start();
+	        LogClass.logger.info("Third Server Added");
 		}
 		
 	}

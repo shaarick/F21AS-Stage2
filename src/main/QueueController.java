@@ -19,6 +19,7 @@ public class QueueController implements ActionListener {
 		if(event.getSource()==gui.increaseTime) {
 			CustomerList.setTime(CustomerList.getTime()+100);
 			gui.time.setText(CustomerList.getTime() / 1000.0 + "s");
+	        LogClass.logger.info("Serving Time Increased");
 			if(CustomerList.getTime()>=5000) {
 				gui.increaseTime.setEnabled(false);
 			}
@@ -29,6 +30,7 @@ public class QueueController implements ActionListener {
 		if(event.getSource()==gui.decreaseTime) {
 			CustomerList.setTime(CustomerList.getTime()-100);
 			gui.time.setText(CustomerList.getTime() / 1000.0 + "s");
+	        LogClass.logger.info("Serving Time Decreased");
 			if(CustomerList.getTime()<=100) {
 				gui.decreaseTime.setEnabled(false);
 			}
@@ -39,6 +41,7 @@ public class QueueController implements ActionListener {
 		if(event.getSource()==gui.qincrease) {
 			CustomerList.setQTime(CustomerList.getQTime()+100);
 			gui.qtime.setText(CustomerList.getQTime() / 1000.0 + "s");
+	        LogClass.logger.info("Enqueue Time Increased");
 			if(CustomerList.getQTime()>=5000) {
 				gui.qincrease.setEnabled(false);
 			}
@@ -49,6 +52,7 @@ public class QueueController implements ActionListener {
 		if(event.getSource()==gui.qdecrease) {
 			CustomerList.setQTime(CustomerList.getQTime()-100);
 			gui.qtime.setText(CustomerList.getQTime() / 1000.0 + "s");
+	        LogClass.logger.info("Enqueue Time Decreased");
 			if(CustomerList.getQTime()<=100) {
 				gui.qdecrease.setEnabled(false);
 			}
@@ -59,6 +63,7 @@ public class QueueController implements ActionListener {
 		if(event.getSource()==gui.rincrease) {
 			CustomerList.setRTime(CustomerList.getRTime()+100);
 			gui.rtime.setText(CustomerList.getRTime() / 1000.0 + "s");
+	        LogClass.logger.info("Resting Time Increased");
 			if(CustomerList.getRTime()>=5000) {
 				gui.rincrease.setEnabled(false);
 			}
@@ -69,6 +74,7 @@ public class QueueController implements ActionListener {
 		if(event.getSource()==gui.rdecrease) {
 			CustomerList.setRTime(CustomerList.getRTime()-100);
 			gui.rtime.setText(CustomerList.getRTime() / 1000.0 + "s");
+	        LogClass.logger.info("Resting Time Decreased");
 			if(CustomerList.getRTime()<=100) {
 				gui.rdecrease.setEnabled(false);
 			}

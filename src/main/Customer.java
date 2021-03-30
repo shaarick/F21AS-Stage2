@@ -139,9 +139,9 @@ public class Customer {
     public String getDiscountLine() {
     	 DecimalFormat df = new DecimalFormat("##.00");
 		if (discount > 0) {
-			return "Total Â£" + df.format(totalOrderAmount) + " (with Â£" + discount + " discount)";
+			return "Total £" + df.format(totalOrderAmount) + " (with £" + discount + " discount)";
 		} else {
-			return "Total Â£" + df.format(totalOrderAmount) + " (no discount)";
+			return "Total £" + df.format(totalOrderAmount) + " (no discount)";
 		}
     }
 }
