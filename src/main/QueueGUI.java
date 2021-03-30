@@ -50,15 +50,15 @@ public class QueueGUI extends JFrame {
 		middle.add(scroll2);
 		this.add(middle);
 		
-		time = new JLabel(CustomerList.getTime()+"",JLabel.CENTER);
+		time = new JLabel(CustomerList.getTime() / 1000.0 + "s",JLabel.CENTER);
         increaseTime = new JButton("Increase Serving Time");
         decreaseTime = new JButton("Decrease Serving Time");
         
-        qtime = new JLabel(CustomerList.getQTime()+"",JLabel.CENTER);
+        qtime = new JLabel(CustomerList.getQTime() / 1000.0 + "s",JLabel.CENTER);
         qincrease = new JButton("Increase Enqueue Time");
         qdecrease = new JButton("Decrease Enqueue Time");
         
-        rtime = new JLabel(CustomerList.getRTime()+"",JLabel.CENTER);
+        rtime = new JLabel(CustomerList.getRTime() / 1000.0 + "s",JLabel.CENTER);
         rincrease = new JButton("Increase Resting Time");
         rdecrease = new JButton("Decrease Resting Time");
         
