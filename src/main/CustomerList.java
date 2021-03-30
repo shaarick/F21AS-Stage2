@@ -64,7 +64,7 @@ public class CustomerList implements Runnable {
 	    catch (InterruptedException e) {}
 	    queue.enqueue(c);
 	    LogClass.logger.info(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
-	    QueueGUI.update(c);
+	    notifyObserver(c);
 	    
 	    //System.out.println(c.getName() + " ordered " + c.getTotalNumberItems() + " items. The order has been added to the queue");
 	}
@@ -73,6 +73,11 @@ public class CustomerList implements Runnable {
 	//	System.out.println("Orders list is empty");
     }
 	
+    public void notifyObserver(Customer c) {
+    	QueueGUI.update(c);
+    }
+    
+    
 	protected static int getTime() {
 		return CustomerList.time;
 	}
