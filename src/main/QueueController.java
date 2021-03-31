@@ -3,7 +3,7 @@ package main;
 import java.awt.event.*;
 
 public class QueueController implements ActionListener {
-	QueueGUI gui;
+	private QueueGUI gui;
 	
 	public QueueController(QueueGUI q) {
 		gui = q;

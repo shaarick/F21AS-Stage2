@@ -6,11 +6,11 @@ import javax.swing.*;
 
 @SuppressWarnings("serial")
 public class StaffGUI extends JFrame implements Observer {
-	JLabel display;
-	JTextArea textArea;
-	Staff staff;
-	String str;
-	JLabel disc;
+	private JLabel display;
+	private JTextArea textArea;
+	private Staff staff;
+	private String str;
+	private JLabel disc;
 	protected static Integer count = 0;
 	
 	public StaffGUI(String name, Staff staff) {

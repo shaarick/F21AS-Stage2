@@ -77,9 +77,9 @@ public class Customer {
 	    }
 	}
 	itemsOrdered.add(item);
-	LogClass.logger.info("-> " + item.getName() + ", " + item.getQuantity() + ", at £" + item.getPrice() + " each for a total of £" + item.getPriceTotal() + ", added to " + getName() + "'s order.");
+	LogClass.logger.info("-> " + item.getName() + ", " + item.getQuantity() + ", at $" + item.getPrice() + " each for a total of $" + item.getPriceTotal() + ", added to " + getName() + "'s order.");
 	
-	//System.out.println("-> " + item.getName() + ", " + item.getQuantity() + ", at £" + item.getPrice() + " each for a total of £" + item.getPriceTotal() + ", added to " + getName() + "'s order.");
+	//System.out.println("-> " + item.getName() + ", " + item.getQuantity() + ", at $" + item.getPrice() + " each for a total of $" + item.getPriceTotal() + ", added to " + getName() + "'s order.");
 	return;
     }
 	
@@ -139,9 +139,9 @@ public class Customer {
     public String getDiscountLine() {
     	 DecimalFormat df = new DecimalFormat("##.00");
 		if (discount > 0) {
-			return "Total £" + df.format(totalOrderAmount) + " (with £" + discount + " discount)";
+			return "Total $" + df.format(totalOrderAmount) + " (with $" + discount + " discount)";
 		} else {
-			return "Total £" + df.format(totalOrderAmount) + " (no discount)";
+			return "Total $" + df.format(totalOrderAmount) + " (no discount)";
 		}
     }
 }
