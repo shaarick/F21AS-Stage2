@@ -1,300 +1,354 @@
-Mar 30, 2021 12:16:06 PM main.LogClass <init>
+Mar 31, 2021 11:11:20 AM main.LogClass <init>
 INFO: CoffeeShop_LogFile:
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Rashid created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Croissant, 3, at £1.5 each for a total of £4.5, added to Rashid's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Cranberry Scone, 4, at £2.0 each for a total of £8.0, added to Rashid's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Ginger Scone, 1, at £3.5 each for a total of £3.5, added to Rashid's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Croissant, 3, at $1.5 each for a total of $4.5, added to Rashid's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Cranberry Scone, 4, at $2.0 each for a total of $8.0, added to Rashid's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Ginger Scone, 1, at $3.5 each for a total of $3.5, added to Rashid's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Rashid's total order amount: £12.5.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Rashid added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Nicolas created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Scottish Cream Scone, 1, at £2.5 each for a total of £2.5, added to Nicolas's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Jumbo Savory Scone, 1, at £3.0 each for a total of £3.0, added to Nicolas's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Scottish Cream Scone, 1, at $2.5 each for a total of $2.5, added to Nicolas's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Jumbo Savory Scone, 1, at $3.0 each for a total of $3.0, added to Nicolas's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Nicolas's total order amount: £5.5.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Nicolas added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Andrew created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Civet Cat, 2, at £2.0 each for a total of £4.0, added to Andrew's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Raspberry Muffin, 3, at £3.0 each for a total of £9.0, added to Andrew's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> I Need ! Ink Pen, 2, at £7.5 each for a total of £15.0, added to Andrew's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Civet Cat, 2, at $2.0 each for a total of $4.0, added to Andrew's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Raspberry Muffin, 3, at $3.0 each for a total of $9.0, added to Andrew's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> I Need ! Ink Pen, 2, at $7.5 each for a total of $15.0, added to Andrew's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Andrew's total order amount: £25.0.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Andrew added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Shariq created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Brazilian, 2, at £2.2 each for a total of £4.4, added to Shariq's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Choco Biscotti, 3, at £3.5 each for a total of £10.5, added to Shariq's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> I Need ! Glasses, 1, at £17.5 each for a total of £17.5, added to Shariq's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> I Need ! Ring, 1, at £35.0 each for a total of £35.0, added to Shariq's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Brazilian, 2, at $2.2 each for a total of $4.4, added to Shariq's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Choco Biscotti, 3, at $3.5 each for a total of $10.5, added to Shariq's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> I Need ! Glasses, 1, at $17.5 each for a total of $17.5, added to Shariq's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> I Need ! Ring, 1, at $35.0 each for a total of $35.0, added to Shariq's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Shariq's total order amount: £63.900000000000006.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Shariq added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Isabel created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Brasileiro Shot, 4, at £3.0 each for a total of £12.0, added to Isabel's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Latte, 1, at £3.75 each for a total of £3.75, added to Isabel's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Brasileiro Shot, 4, at $3.0 each for a total of $12.0, added to Isabel's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Latte, 1, at $3.75 each for a total of $3.75, added to Isabel's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Isabel's total order amount: £12.75.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Isabel added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Henry created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Flan Vanille, 1, at £2.0 each for a total of £2.0, added to Henry's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Flan Vanille, 1, at $2.0 each for a total of $2.0, added to Henry's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Henry's total order amount: £2.0.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Henry added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Anna created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Choco Croissant, 3, at £3.75 each for a total of £11.25, added to Anna's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Rio Nights, 1, at £6.0 each for a total of £6.0, added to Anna's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Choco Croissant, 3, at $3.75 each for a total of $11.25, added to Anna's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Rio Nights, 1, at $6.0 each for a total of $6.0, added to Anna's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Anna's total order amount: £13.5.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Anna added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Lucy created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> I Need ! Toque, 1, at £23.0 each for a total of £23.0, added to Lucy's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Raspberry Muffin, 1, at £2.0 each for a total of £2.0, added to Lucy's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Happy Holidays, 1, at £3.75 each for a total of £3.75, added to Lucy's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Tradition Chai, 2, at £2.5 each for a total of £5.0, added to Lucy's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> I Need ! Toque, 1, at $23.0 each for a total of $23.0, added to Lucy's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Raspberry Muffin, 1, at $2.0 each for a total of $2.0, added to Lucy's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Happy Holidays, 1, at $3.75 each for a total of $3.75, added to Lucy's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Tradition Chai, 2, at $2.5 each for a total of $5.0, added to Lucy's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Lucy's total order amount: £33.75.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Lucy added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Sean created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Scottish Scone, 5, at £4.5 each for a total of £22.5, added to Sean's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Choux Ã  la crÃ¨me, 2, at £2.0 each for a total of £4.0, added to Sean's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Earl Grey, 3, at £2.5 each for a total of £7.5, added to Sean's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Scottish Scone, 5, at $4.5 each for a total of $22.5, added to Sean's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Choux Ã  la crÃ¨me, 2, at $2.0 each for a total of $4.0, added to Sean's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Earl Grey, 3, at $2.5 each for a total of $7.5, added to Sean's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Sean's total order amount: £27.0.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Sean added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Emma created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Paris Brest, 4, at £3.5 each for a total of £14.0, added to Emma's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Chouquettes 20u, 2, at £1.5 each for a total of £3.0, added to Emma's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> I Need ! Scarf, 1, at £120.0 each for a total of £120.0, added to Emma's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Cappuccino, 3, at £3.75 each for a total of £11.25, added to Emma's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Paris Brest, 4, at $3.5 each for a total of $14.0, added to Emma's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Chouquettes 20u, 2, at $1.5 each for a total of $3.0, added to Emma's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> I Need ! Scarf, 1, at $120.0 each for a total of $120.0, added to Emma's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Cappuccino, 3, at $3.75 each for a total of $11.25, added to Emma's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Emma's total order amount: £141.0.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Emma added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer James created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Dark Chocolate, 1, at £3.5 each for a total of £3.5, added to James's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Dark Chocolate, 1, at $3.5 each for a total of $3.5, added to James's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: James's total order amount: £3.5.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: James added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Anthony created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Choco Brownie, 1, at £1.5 each for a total of £1.5, added to Anthony's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> I Need ! T-shirt, 1, at £28.0 each for a total of £28.0, added to Anthony's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Chili Mayan, 2, at £13.33 each for a total of £26.66, added to Anthony's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Choco Brownie, 1, at $1.5 each for a total of $1.5, added to Anthony's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> I Need ! T-shirt, 1, at $28.0 each for a total of $28.0, added to Anthony's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Chili Mayan, 2, at $13.33 each for a total of $26.66, added to Anthony's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Anthony's total order amount: £56.16.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Anthony added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Jessica created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Lemon Grass, 2, at £2.5 each for a total of £5.0, added to Jessica's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Spicy Eye Open, 3, at £2.5 each for a total of £7.5, added to Jessica's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Lemon Grass, 2, at $2.5 each for a total of $5.0, added to Jessica's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Spicy Eye Open, 3, at $2.5 each for a total of $7.5, added to Jessica's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Jessica's total order amount: £10.0.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Jessica added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Jim created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Almond Croissant, 4, at £3.75 each for a total of £15.0, added to Jim's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> 3 Maple Pancake, 1, at £2.5 each for a total of £2.5, added to Jim's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> I Need ! Cup, 1, at £14.0 each for a total of £14.0, added to Jim's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Almond Croissant, 4, at $3.75 each for a total of $15.0, added to Jim's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> 3 Maple Pancake, 1, at $2.5 each for a total of $2.5, added to Jim's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> I Need ! Cup, 1, at $14.0 each for a total of $14.0, added to Jim's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Jim's total order amount: £27.75.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Jim added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Michael created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Grown Organic, 1, at £3.75 each for a total of £3.75, added to Michael's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Snow Hot Choco, 1, at £3.0 each for a total of £3.0, added to Michael's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Morning Sunrise, 2, at £2.5 each for a total of £5.0, added to Michael's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Organic Decaf, 1, at £22.5 each for a total of £22.5, added to Michael's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Jumbo Scone, 3, at £3.75 each for a total of £11.25, added to Michael's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Choux a la creme, 5, at £2.0 each for a total of £10.0, added to Michael's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> I Need ! Mug, 1, at £12.0 each for a total of £12.0, added to Michael's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Grown Organic, 1, at $3.75 each for a total of $3.75, added to Michael's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Snow Hot Choco, 1, at $3.0 each for a total of $3.0, added to Michael's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Morning Sunrise, 2, at $2.5 each for a total of $5.0, added to Michael's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Organic Decaf, 1, at $22.5 each for a total of $22.5, added to Michael's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Jumbo Scone, 3, at $3.75 each for a total of $11.25, added to Michael's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Choux a la creme, 5, at $2.0 each for a total of $10.0, added to Michael's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> I Need ! Mug, 1, at $12.0 each for a total of $12.0, added to Michael's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Michael's total order amount: £61.75.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Michael added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Customer Robin created.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> Eclair Coffee, 2, at £2.5 each for a total of £5.0, added to Robin's order.
-Mar 30, 2021 12:16:06 PM main.Customer addToItemsOrdered
-INFO: -> English Break, 2, at £2.5 each for a total of £5.0, added to Robin's order.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> Eclair Coffee, 2, at $2.5 each for a total of $5.0, added to Robin's order.
+Mar 31, 2021 11:11:20 AM main.Customer addToItemsOrdered
+INFO: -> English Break, 2, at $2.5 each for a total of $5.0, added to Robin's order.
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: Robin's total order amount: £10.0.
-Mar 30, 2021 12:16:06 PM main.CustomerList addCustomerToList
+Mar 31, 2021 11:11:20 AM main.CustomerList addCustomerToList
 INFO: Robin added to the customers' list.
-Mar 30, 2021 12:16:06 PM main.Input readFile
+Mar 31, 2021 11:11:20 AM main.Input readFile
 INFO: -----------------------------------------------------------------------------------------
-Mar 30, 2021 12:16:06 PM main.QueueGUI <init>
+Mar 31, 2021 11:11:21 AM main.QueueGUI <init>
 INFO: GUI Initialised
-Mar 30, 2021 12:16:08 PM main.CustomerList run
+Mar 31, 2021 11:11:26 AM main.QueueController actionPerformed
+INFO: Enqueue Time Decreased
+Mar 31, 2021 11:11:26 AM main.QueueController actionPerformed
+INFO: Enqueue Time Decreased
+Mar 31, 2021 11:11:26 AM main.QueueController actionPerformed
+INFO: Enqueue Time Decreased
+Mar 31, 2021 11:11:26 AM main.QueueController actionPerformed
+INFO: Enqueue Time Decreased
+Mar 31, 2021 11:11:27 AM main.QueueController actionPerformed
+INFO: Enqueue Time Decreased
+Mar 31, 2021 11:11:27 AM main.QueueController actionPerformed
+INFO: Enqueue Time Decreased
+Mar 31, 2021 11:11:27 AM main.QueueController actionPerformed
+INFO: Enqueue Time Decreased
+Mar 31, 2021 11:11:27 AM main.QueueController actionPerformed
+INFO: Enqueue Time Decreased
+Mar 31, 2021 11:11:27 AM main.QueueController actionPerformed
+INFO: Enqueue Time Decreased
+Mar 31, 2021 11:11:28 AM main.CustomerList run
 INFO: Isabel ordered 5 items. The order has been added to the queue
-Mar 30, 2021 12:16:08 PM main.Staff run
+Mar 31, 2021 11:11:28 AM main.Staff run
 INFO: Server 2 is serving Isabel
-Mar 30, 2021 12:16:13 PM main.Staff run
-INFO: Server 2 has served Isabel
-Mar 30, 2021 12:16:15 PM main.CustomerList run
+Mar 31, 2021 11:11:29 AM main.CustomerList run
 INFO: James ordered 1 items. The order has been added to the queue
-Mar 30, 2021 12:16:15 PM main.Staff run
-INFO: Server 2 is serving James
-Mar 30, 2021 12:16:16 PM main.Staff run
-INFO: Server 2 has served James
-Mar 30, 2021 12:16:16 PM main.Staff run
-INFO: Server 1 is serving Anthony
-Mar 30, 2021 12:16:16 PM main.CustomerList run
+Mar 31, 2021 11:11:29 AM main.CustomerList run
 INFO: Anthony ordered 4 items. The order has been added to the queue
-Mar 30, 2021 12:16:20 PM main.Staff run
-INFO: Server 1 has served Anthony
-Mar 30, 2021 12:16:23 PM main.Staff run
-INFO: Server 1 is serving Rashid
-Mar 30, 2021 12:16:23 PM main.CustomerList run
+Mar 31, 2021 11:11:29 AM main.CustomerList run
 INFO: Rashid ordered 8 items. The order has been added to the queue
-Mar 30, 2021 12:16:24 PM main.Staff run
-INFO: Server 2 is serving Andrew
-Mar 30, 2021 12:16:24 PM main.CustomerList run
-INFO: Andrew ordered 7 items. The order has been added to the queue
-Mar 30, 2021 12:16:27 PM main.CustomerList run
-INFO: Shariq ordered 7 items. The order has been added to the queue
-Mar 30, 2021 12:16:30 PM main.CustomerList run
-INFO: Nicolas ordered 2 items. The order has been added to the queue
-Mar 30, 2021 12:16:30 PM main.QueueGUI update
+Mar 31, 2021 11:11:29 AM main.QueueGUI update
 INFO: Third Server Added
-Mar 30, 2021 12:16:30 PM main.Staff run
-INFO: Server 3 is serving Shariq
-Mar 30, 2021 12:16:31 PM main.Staff run
-INFO: Server 1 has served Rashid
-Mar 30, 2021 12:16:31 PM main.Staff run
-INFO: Server 2 has served Andrew
-Mar 30, 2021 12:16:32 PM main.Staff run
-INFO: Server 1 is serving Nicolas
-Mar 30, 2021 12:16:34 PM main.Staff run
-INFO: Server 1 has served Nicolas
-Mar 30, 2021 12:16:36 PM main.Staff run
-INFO: Server 1 is serving Jim
-Mar 30, 2021 12:16:36 PM main.CustomerList run
+Mar 31, 2021 11:11:29 AM main.Staff run
+INFO: Server 3 is serving James
+Mar 31, 2021 11:11:29 AM main.QueueController actionPerformed
+INFO: Serving Time Decreased
+Mar 31, 2021 11:11:29 AM main.CustomerList run
+INFO: Andrew ordered 7 items. The order has been added to the queue
+Mar 31, 2021 11:11:29 AM main.QueueController actionPerformed
+INFO: Serving Time Decreased
+Mar 31, 2021 11:11:29 AM main.Staff run
+INFO: Server 1 is serving Anthony
+Mar 31, 2021 11:11:30 AM main.QueueController actionPerformed
+INFO: Serving Time Decreased
+Mar 31, 2021 11:11:30 AM main.CustomerList run
+INFO: Shariq ordered 7 items. The order has been added to the queue
+Mar 31, 2021 11:11:30 AM main.QueueController actionPerformed
+INFO: Serving Time Decreased
+Mar 31, 2021 11:11:30 AM main.QueueController actionPerformed
+INFO: Serving Time Decreased
+Mar 31, 2021 11:11:30 AM main.Staff run
+INFO: Server 3 has served James
+Mar 31, 2021 11:11:30 AM main.QueueController actionPerformed
+INFO: Serving Time Decreased
+Mar 31, 2021 11:11:30 AM main.CustomerList run
+INFO: Nicolas ordered 2 items. The order has been added to the queue
+Mar 31, 2021 11:11:30 AM main.QueueController actionPerformed
+INFO: Serving Time Decreased
+Mar 31, 2021 11:11:30 AM main.CustomerList run
 INFO: Jim ordered 6 items. The order has been added to the queue
-Mar 30, 2021 12:16:37 PM main.Staff run
-INFO: Server 3 has served Shariq
-Mar 30, 2021 12:16:38 PM main.CustomerList run
+Mar 31, 2021 11:11:30 AM main.QueueController actionPerformed
+INFO: Serving Time Decreased
+Mar 31, 2021 11:11:31 AM main.CustomerList run
 INFO: Michael ordered 14 items. The order has been added to the queue
-Mar 30, 2021 12:16:38 PM main.Staff run
-INFO: Server 2 is serving Michael
-Mar 30, 2021 12:16:42 PM main.CustomerList run
+Mar 31, 2021 11:11:31 AM main.QueueController actionPerformed
+INFO: Serving Time Decreased
+Mar 31, 2021 11:11:31 AM main.CustomerList run
 INFO: Sean ordered 10 items. The order has been added to the queue
-Mar 30, 2021 12:16:42 PM main.Staff run
-INFO: Server 3 is serving Sean
-Mar 30, 2021 12:16:42 PM main.Staff run
-INFO: Server 1 has served Jim
-Mar 30, 2021 12:16:46 PM main.Staff run
-INFO: Server 1 is serving Lucy
-Mar 30, 2021 12:16:46 PM main.CustomerList run
+Mar 31, 2021 11:11:31 AM main.Staff run
+INFO: Server 3 is serving Rashid
+Mar 31, 2021 11:11:31 AM main.CustomerList run
 INFO: Lucy ordered 5 items. The order has been added to the queue
-Mar 30, 2021 12:16:47 PM main.CustomerList run
+Mar 31, 2021 11:11:32 AM main.CustomerList run
 INFO: Emma ordered 10 items. The order has been added to the queue
-Mar 30, 2021 12:16:51 PM main.CustomerList run
+Mar 31, 2021 11:11:32 AM main.Staff run
+INFO: Server 3 has served Rashid
+Mar 31, 2021 11:11:32 AM main.QueueController actionPerformed
+INFO: Resting Time Decreased
+Mar 31, 2021 11:11:32 AM main.QueueController actionPerformed
+INFO: Resting Time Decreased
+Mar 31, 2021 11:11:32 AM main.CustomerList run
 INFO: Jessica ordered 5 items. The order has been added to the queue
-Mar 30, 2021 12:16:51 PM main.Staff run
-INFO: Server 1 has served Lucy
-Mar 30, 2021 12:16:52 PM main.Staff run
-INFO: Server 2 has served Michael
-Mar 30, 2021 12:16:52 PM main.Staff run
-INFO: Server 1 is serving Emma
-Mar 30, 2021 12:16:52 PM main.Staff run
-INFO: Server 3 has served Sean
-Mar 30, 2021 12:16:53 PM main.Staff run
-INFO: Server 2 is serving Jessica
-Mar 30, 2021 12:16:57 PM main.CustomerList run
+Mar 31, 2021 11:11:32 AM main.QueueController actionPerformed
+INFO: Resting Time Decreased
+Mar 31, 2021 11:11:32 AM main.CustomerList run
 INFO: Robin ordered 4 items. The order has been added to the queue
-Mar 30, 2021 12:16:57 PM main.Staff run
-INFO: Server 3 is serving Robin
-Mar 30, 2021 12:16:58 PM main.Staff run
-INFO: Server 2 has served Jessica
-Mar 30, 2021 12:17:01 PM main.Staff run
-INFO: Server 3 has served Robin
-Mar 30, 2021 12:17:02 PM main.CustomerList run
+Mar 31, 2021 11:11:33 AM main.QueueController actionPerformed
+INFO: Resting Time Decreased
+Mar 31, 2021 11:11:33 AM main.CustomerList run
 INFO: Henry ordered 1 items. The order has been added to the queue
-Mar 30, 2021 12:17:02 PM main.Staff run
-INFO: Server 2 is serving Henry
-Mar 30, 2021 12:17:02 PM main.Staff run
-INFO: Server 1 has served Emma
-Mar 30, 2021 12:17:03 PM main.Staff run
-INFO: Server 2 has served Henry
-Mar 30, 2021 12:17:06 PM main.CustomerList run
+Mar 31, 2021 11:11:33 AM main.Staff run
+INFO: Server 1 has served Anthony
+Mar 31, 2021 11:11:33 AM main.QueueController actionPerformed
+INFO: Resting Time Decreased
+Mar 31, 2021 11:11:33 AM main.CustomerList run
 INFO: Anna ordered 4 items. The order has been added to the queue
-Mar 30, 2021 12:17:06 PM main.Staff run
-INFO: Server 2 is serving Anna
-Mar 30, 2021 12:17:06 PM main.CustomerList run
+Mar 31, 2021 11:11:33 AM main.CustomerList run
 INFO: Orders list is empty
-Mar 30, 2021 12:17:07 PM main.Staff run
+Mar 31, 2021 11:11:33 AM main.Staff run
+INFO: Server 3 is serving Andrew
+Mar 31, 2021 11:11:33 AM main.QueueController actionPerformed
+INFO: Resting Time Decreased
+Mar 31, 2021 11:11:33 AM main.QueueController actionPerformed
+INFO: Resting Time Decreased
+Mar 31, 2021 11:11:33 AM main.Staff run
+INFO: Server 1 is serving Shariq
+Mar 31, 2021 11:11:33 AM main.QueueController actionPerformed
+INFO: Resting Time Decreased
+Mar 31, 2021 11:11:33 AM main.Staff run
+INFO: Server 2 has served Isabel
+Mar 31, 2021 11:11:33 AM main.QueueController actionPerformed
+INFO: Resting Time Decreased
+Mar 31, 2021 11:11:34 AM main.Staff run
+INFO: Server 3 has served Andrew
+Mar 31, 2021 11:11:34 AM main.Staff run
+INFO: Server 3 is serving Nicolas
+Mar 31, 2021 11:11:34 AM main.Staff run
+INFO: Server 2 is serving Jim
+Mar 31, 2021 11:11:34 AM main.Staff run
+INFO: Server 3 has served Nicolas
+Mar 31, 2021 11:11:34 AM main.Staff run
+INFO: Server 1 has served Shariq
+Mar 31, 2021 11:11:34 AM main.Staff run
+INFO: Server 3 is serving Michael
+Mar 31, 2021 11:11:34 AM main.Staff run
+INFO: Server 1 is serving Sean
+Mar 31, 2021 11:11:34 AM main.Staff run
+INFO: Server 2 has served Jim
+Mar 31, 2021 11:11:34 AM main.Staff run
+INFO: Server 2 is serving Lucy
+Mar 31, 2021 11:11:35 AM main.Staff run
+INFO: Server 2 has served Lucy
+Mar 31, 2021 11:11:35 AM main.Staff run
+INFO: Server 2 is serving Emma
+Mar 31, 2021 11:11:35 AM main.Staff run
+INFO: Server 1 has served Sean
+Mar 31, 2021 11:11:35 AM main.Staff run
+INFO: Server 1 is serving Jessica
+Mar 31, 2021 11:11:35 AM main.Staff run
+INFO: Server 3 has served Michael
+Mar 31, 2021 11:11:35 AM main.Staff run
+INFO: Server 3 is serving Robin
+Mar 31, 2021 11:11:36 AM main.Staff run
+INFO: Server 1 has served Jessica
+Mar 31, 2021 11:11:36 AM main.Staff run
+INFO: Server 1 is serving Henry
+Mar 31, 2021 11:11:36 AM main.Staff run
+INFO: Server 3 has served Robin
+Mar 31, 2021 11:11:36 AM main.Staff run
+INFO: Server 1 has served Henry
+Mar 31, 2021 11:11:36 AM main.Staff run
+INFO: Server 2 has served Emma
+Mar 31, 2021 11:11:36 AM main.Staff run
+INFO: Server 3 is serving Anna
+Mar 31, 2021 11:11:36 AM main.Staff run
 INFO: Server 1 is done working.
-Mar 30, 2021 12:17:07 PM main.Staff run
-INFO: Server 3 is done working.
-Mar 30, 2021 12:17:10 PM main.Staff run
-INFO: Server 2 has served Anna
-Mar 30, 2021 12:17:11 PM main.Staff run
+Mar 31, 2021 11:11:36 AM main.Staff run
 INFO: Server 2 is done working.
+Mar 31, 2021 11:11:36 AM main.Staff run
+INFO: Server 3 has served Anna
+Mar 31, 2021 11:11:37 AM main.Staff run
+INFO: Server 3 is done working.

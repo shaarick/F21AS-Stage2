@@ -4,6 +4,12 @@ import java.awt.GridLayout;
 
 import javax.swing.*;
 
+/**StaffGUI class
+ * GUI for member of staff
+ * @author Andrew Manson, Shariq Farooqui
+ *
+ */
+
 @SuppressWarnings("serial")
 public class StaffGUI extends JFrame implements Observer {
 	private JLabel display;
@@ -39,11 +45,17 @@ public class StaffGUI extends JFrame implements Observer {
 		this.staff.registerObserver(this);
 	}
 	
+	/**
+	 * Set location of GUI on computer screen
+	 */
 	public synchronized void setLocation() {
 		setLocation(300 * (Integer.parseInt(Thread.currentThread().getName().substring(7)) - 1), 375);
 		StaffGUI.count++;
 	}
 	
+	/**
+	 * Display information about customer being served
+	 */
 	public void update() {
 		for(Item i: staff.getCurrent().getItemsOrdered()) {
 			str += i.getQuantity() + " " + i.getName() + "\n";
@@ -54,11 +66,17 @@ public class StaffGUI extends JFrame implements Observer {
 		disc.setText(staff.getCurrent().getDiscountLine());
 	}
 
+	/**
+	 * Close GUI
+	 */
 	@Override
 	public void updateDone() {
 		this.dispose();
 	}
 
+	/**
+	 * Customer has been served
+	 */
 	@Override
 	public void updateServed(Customer c) {
 		display.setText("Finished serving " + c.getName());

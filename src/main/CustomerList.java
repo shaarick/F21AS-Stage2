@@ -77,27 +77,50 @@ public class CustomerList implements Runnable {
     	QueueGUI.update(c);
     }
     
-    
+    /**
+     * 
+     * @return serving time
+     */
 	protected static int getTime() {
 		return CustomerList.time;
 	}
 	
+	/**
+	 * Set serving time
+	 * @param time
+	 */
 	protected static void setTime(int time) {
 		CustomerList.time = time;
 	}
 	
+	/**
+	 * 
+	 * @return queueing time
+	 */
 	protected static int getQTime() {
 		return CustomerList.qtime;
 	}
 	
+	/**
+	 * Set queueing time
+	 * @param time
+	 */
 	protected static void setQTime(int time) {
 		CustomerList.qtime = time;
 	}
 	
+	/**
+	 * 
+	 * @return resting time
+	 */
 	protected static int getRTime() {
 		return CustomerList.rtime;
 	}
 	
+	/**
+	 * Set resting time
+	 * @param time
+	 */
 	protected static void setRTime(int time) {
 		CustomerList.rtime = time;
 	}

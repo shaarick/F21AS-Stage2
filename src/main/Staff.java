@@ -20,6 +20,9 @@ public class Staff implements Runnable, Subject {
 		gui = new LinkedList<Observer>();
 	}
 
+	/**
+	 * Staff serves customers in queue
+	 */
 	@SuppressWarnings("static-access")
 	public void run() {
 		registerObserver(new StaffGUI(name,this));
@@ -47,25 +50,41 @@ public class Staff implements Runnable, Subject {
 		return;
 	}
 	
+	/**
+	 * 
+	 * @return current customer
+	 */
 	public Customer getCurrent() {
 		return current;
 	}
 
+	/**
+	 * Add Staff GUI to list
+	 */
 	public void registerObserver(Observer observer) {
 		gui.add(observer);
 	}
 
+	/**
+	 * Remove Staff GUI from list
+	 */
 	public void removeObserver(Observer observer) {
 		gui.remove(observer);
 		
 	}
 
+	/**
+	 * Display information about customer being served
+	 */
 	public void notifyObservers() {
 		for(Observer observer: gui) {
 			observer.update();
 		}
 	}
 
+	/**
+	 * Close GUI
+	 */
 	@Override
 	public void notifyDone() {
 		for(Observer observer: gui) {
@@ -73,6 +92,9 @@ public class Staff implements Runnable, Subject {
 		}
 	}
 
+	/**
+	 * Customer has been served 
+	 */
 	@Override
 	public void notifyServed(Customer c) {
 		for(Observer observer: gui) {
